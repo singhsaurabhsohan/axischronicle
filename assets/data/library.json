@@ -1,0 +1,93 @@
+[
+  {
+    "id": "baribari-episode-1",
+    "type": "film",
+    "featured": true,
+    "title": "BARIBARI",
+    "subtitle": "Episode 1: The Loop & The Armor",
+    "category": "Original film",
+    "date": "October 2026",
+    "duration": "34:00",
+    "excerpt": "A solitary cyclist takes a shortcut through a house that has no exit. A film built from 255 held, eight-second panels, voiceover and room tone.",
+    "embed": "",
+    "cover": "",
+    "action": "Watch Episode 1",
+    "target": "screening"
+  },
+  {
+    "id": "field-note-001",
+    "type": "article",
+    "title": "The Eight-Second Panel as a Unit of Attention",
+    "subtitle": "Why AxisChronicle gives each visual composition a measured span instead of asking it to hurry.",
+    "category": "Format & Cognition",
+    "date": "October 2026",
+    "readTime": "4 min read",
+    "author": "Saurabh Sohan Singh",
+    "role": "Creator & Filmmaker, SQUARGRAPH™",
+    "number": "001",
+    "excerpt": "Contemporary screen media is engineered around nervous compression. When an edit occurs every 1.4 seconds, the human eye ceases to observe; it merely flinches. In AxisChronicle, eight seconds is not a pause. It is the duration required for an image to breathe, reveal its architecture, and settle into memory.",
+    "content": [
+      "Contemporary screen media is engineered around nervous compression. When an edit occurs every 1.4 seconds, the human eye ceases to observe; it merely flinches. In AxisChronicle, eight seconds is not a pause. It is the duration required for an image to breathe, reveal its architecture, and settle into memory.",
+      "The eight-second panel is derived from cognitive rhythm. In classical neuro-cinematics, eight seconds marks the threshold where short-term visual processing transitions into semantic contemplation. In the first two seconds, the brain maps geometric spatial relationships—doors, shadows, horizon lines. Between seconds three and five, it absorbs detail and textural nuance—the dust on a bicycle spoke, the grain of a stone railing, the subtle tilt of a character's gaze. In the final three seconds, the viewer enters the internal state of the scene.",
+      "By standardizing this 8-second unit, AxisChronicle transforms time into a visible grid. Just as architectural design relies on module repetition to create monumental space, our storytelling engine uses strict intervals to generate hypnotic, slow-burn psychological tension. The story does not rush you forward; it invites you to dwell within the frame."
+    ],
+    "cover": ""
+  },
+  {
+    "id": "field-note-002",
+    "type": "article",
+    "title": "Building a Film from Fragments",
+    "subtitle": "Notes on continuity, recurrence, and what the human voice reveals between cuts.",
+    "category": "Cinematic Process",
+    "date": "October 2026",
+    "readTime": "6 min read",
+    "author": "Saurabh Sohan Singh",
+    "role": "Creator & Filmmaker, SQUARGRAPH™",
+    "number": "002",
+    "excerpt": "In traditional filmmaking, the cut is often used to disguise transitions or force emotional velocity. In AxisChronicle, each panel stands as a sovereign photographic statement. The voiceover does not explain what the camera sees—it forms an emotional counterpoint to what the frame withholds.",
+    "content": [
+      "In traditional filmmaking, the cut is often used to disguise transitions or force emotional velocity. In AxisChronicle, each panel stands as a sovereign photographic statement. The voiceover does not explain what the camera sees—it forms an emotional counterpoint to what the frame withholds.",
+      "Consider BARIBARI: A solitary cyclist rides down a quiet Indian lane at dusk. Three women watch from an upper window behind an iron railing. A shortcut turns into a concrete labyrinth where doors loop endlessly. A chance encounter in an illuminated shop. A party where silence speaks louder than laughter. A sudden collapse on a dark road. A morning awakening where a name lingers but a identity slips into the mist.",
+      "Each frame is meticulously anchored in physical continuity: the precise cut of Saurabh's black utility jacket, the deep burgundy texture of Baribari's embroidered salwar, the three distinct faces framed by aged masonry. Because each panel is held for eight seconds, any discontinuity would break the hypnotic trance. We construct these frames not as transient video clips, but as deliberate paintings in motion."
+    ],
+    "cover": ""
+  },
+  {
+    "id": "field-note-003",
+    "type": "article",
+    "title": "When Narration Becomes a Place",
+    "subtitle": "A reflection on spatial sound design, silence, and the interior architecture of slow-burn suspense.",
+    "category": "Sonic Architecture",
+    "date": "October 2026",
+    "readTime": "5 min read",
+    "author": "Saurabh Sohan Singh",
+    "role": "Creator & Filmmaker, SQUARGRAPH™",
+    "number": "003",
+    "excerpt": "Sound in high-end arthouse cinema is never mere background accompaniment; it is the physical weather of the film. In an eight-second visual system, the voiceover must hold the gravitational centre of the world.",
+    "content": [
+      "Sound in high-end arthouse cinema is never mere background accompaniment; it is the physical weather of the film. In an eight-second visual system, the voiceover must hold the gravitational centre of the world.",
+      "When the image does not move with frantic kineticism, the ear becomes hyper-sensitised. The creak of a bicycle pedal at dusk, the distant hum of evening traffic across Delhi's periphery, the cold metallic resonance of a rolling shutter unlocking in an empty hallway—these sounds define spatial reality long before dialogue is delivered.",
+      "The voiceover in AxisChronicle adopts a voice of intimate, measured restraint. It never lectures or over-dramatizes. It speaks as though recounting an indelible memory or an unnerving dream that cannot be unlearned. The pauses between sentences are as structurally vital as the words themselves; silence gives the viewer room to examine the corners of the frame."
+    ],
+    "cover": ""
+  },
+  {
+    "id": "field-note-004",
+    "type": "article",
+    "title": "The Anti-Feed Manifesto",
+    "subtitle": "Why curated slowness and austere craft outlast algorithmic dopamine loops.",
+    "category": "Philosophy & Imprint",
+    "date": "October 2026",
+    "readTime": "5 min read",
+    "author": "SQUARGRAPH™ Editorial Board",
+    "role": "Studio Directive, New Delhi",
+    "number": "004",
+    "excerpt": "We reject the algorithmic degradation of cinematic art into ephemeral 5-second dopamine snacks. AxisChronicle is constructed as a private cinema for public imagination—where each work is treated with museum-grade permanence.",
+    "content": [
+      "We reject the algorithmic degradation of cinematic art into ephemeral 5-second dopamine snacks. AxisChronicle is constructed as a private cinema for public imagination—where each work is treated with museum-grade permanence.",
+      "The digital media landscape is oversaturated with disposable visual clutter, hollow superlatives, and artificial metrics. Platforms compete to shorten attention spans, leaving audiences fatigued and emotionally hollow. SQUARGRAPH was founded on the fundamental belief that perception shapes value, and that true cultural resonance demands mathematical clarity and uncompromising aesthetic discipline.",
+      "AxisChronicle operates as a deliberate counter-cultural sanctuary. By pairing cinema of the unseen with a minimalist editorial archive, we establish a new paradigm: high-retention storytelling designed not for mindless consumption, but for deep, enduring engagement."
+    ],
+    "cover": ""
+  }
+]
