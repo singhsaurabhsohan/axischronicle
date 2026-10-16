@@ -1,0 +1,10 @@
+/*
+  X-Frame-Options: SAMEORIGIN
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: strict-origin-when-cross-origin
+  Permissions-Policy: camera=(), microphone=(), geolocation=()
+  Strict-Transport-Security: max-age=63072000; includeSubDomains; preload
+  Content-Security-Policy: default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self' data:; connect-src 'self'; frame-src 'self' https://play.gumlet.io https://www.youtube.com https://player.vimeo.com https://www.google.com; frame-ancestors 'self'; object-src 'none'; base-uri 'self'; form-action 'self' mailto:
+/assets/data/*.json
+  Content-Type: application/json; charset=utf-8
+  Cache-Control: public, max-age=300

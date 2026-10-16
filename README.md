@@ -1,96 +1,50 @@
-# AxisChronicle — Arthouse Cinema Platform & Storytelling Engine
+# AxisChronicle
 
-> **AxisChronicle**: An independent, original intellectual property (IP) created by **SQUARGRAPH™** and filmmaker **Saurabh Sohan Singh**.
+The media imprint of **SQUARGRAPH™**: original films, stories and articles, published at `axischronicle.squargraph.com`.
 
----
+The site is a static site (no build step, no framework). It reuses the SQUARGRAPH design system from `squargraph.com` so both sites look and behave the same: colours, Satoshi typography, pill controls, navigation, sections and footer.
 
-## 📽️ Overview
+## How the design stays identical to squargraph.com
 
-AxisChronicle is engineered as a hybrid between a curated cinema streaming platform (such as MUBI) and a minimalist design archive. The core product consists of atmospheric, slow-burn psychological thrillers and surreal narratives structured in a distinct visual format: **long-form films assembled frame-by-frame out of precise eight-second cinematic panels paired with deep voiceover narration and spatial room-tone**.
+These files are copied **unchanged** from the `squargraph-site` repo. Do not edit them here; re-copy them when the main site changes.
 
----
-
-## 💎 Design Alignment with SQUARGRAPH™ Guardrails
-
-The website strictly complies with the latest **SQUARGRAPH Brand Guidelines and Design Guardrails** (from the October 2026 playbook and codebase backup):
-
-1. **Typography**:
-   - Satoshi only (`Regular 400`, `Medium 500`, `Bold 700`).
-   - Zero letter-spacing in compact UI and body text.
-   - Tight tracking (`-.045em` to `-.065em`) on large display headlines.
-   - Zero italics in copy.
-2. **Color Palette**:
-   - Canvas: Pitch Black (`#070807` / `#050605`)
-   - Surface / Panels: Deep Obsidian (`#0E110E` / `#131713`)
-   - Paper / Text: `#FAFAF9`
-   - Accents: Electric Sage (`#D8E9A1`), SQUARGRAPH Forest (`#1C3025`), Moss (`#657158`), Muted Gold (`#B48A4A` used sparingly).
-   - Zero purple tones, zero fake glassmorphism, zero decorative blobs.
-3. **Card & Border Discipline**:
-   - Maximum corner radius: 8px.
-   - Hairline borders: `rgba(250, 250, 249, 0.14)`.
-   - Cards are never nested inside cards.
-4. **Brand Attribution**:
-   - Official SQUARGRAPH™ open-diamond emblem (polygon without inner ending stroke).
-   - Uncompromising trademark adherence: `SQUARGRAPH™`.
-
----
-
-## 🚀 Live Features & Engine Capabilities
-
-| Feature | Description |
+| Copied file | Purpose |
 | :--- | :--- |
-| **8-Second Cinema Stage** | Interactive continuous playback engine for flagship original *BARIBARI*. Each panel holds for exactly 8 seconds with dynamic visual atmosphere, live countdown ring, and real-time teleprompter readout. |
-| **8-Second Scrubber Deck** | Calibrated film scrubber with 8-second tick intervals allowing instantaneous frame-jumping across all 75 panels. Includes keyboard shortcuts (`Space`, `←`, `→`, `F`, `M`). |
-| **Web Audio Ambient Engine** | Built-in analog room-tone synthesizer (55Hz sub-harmonic drone and warm atmospheric harmonics) creating an immersive cinema environment upon user gesture. |
-| **Interactive Screenplay Archive** | Complete 75-panel production script with camera directions, scene slugs, and timecodes. Clicking any panel jumps immediately to that frame in the player. |
-| **Character Continuity Bible** | Verified character specifications for Saurabh, Baribari, and the Women at the Great House. |
-| **Written Archive & Editorial Drawer** | Slide-over reading room featuring 4 in-depth architectural essays on neuro-cinematics, spatial audio, and the *Anti-Feed Manifesto*. |
-| **Curatorial Screener Dialog** | Accessible modal for film festival programmers, curators, and critics to request private full-cut screener credentials. |
+| `fonts/` | Satoshi 400 / 500 / 700 |
+| `assets/css/tokens.css`, `base.css`, `layout.css`, `components.css`, `animations.css` | Tokens, reset, nav, footer, buttons, forms |
+| `assets/css/pages/home.css`, `home-studio.css`, `home-hero-v2.css`, `home-accent-consistency.css` | Homepage hero, section system, nav-over-hero |
+| `assets/css/site-refresh.css`, `form-system.css` | Final palette overrides, footer, form system |
+| `logo-g-v2.webp`, favicons, founder portrait | Brand assets |
 
----
+Files specific to AxisChronicle:
 
-## 📁 Directory Structure
+| File | Purpose |
+| :--- | :--- |
+| `assets/css/axis.css` | Player, library, reader drawer, archive. Uses only SQUARGRAPH tokens. |
+| `assets/js/site-nav.js` | Nav behaviour (extracted from the main site's `core.js`) |
+| `assets/js/footer-map.js` | Footer "Business profile" block (extracted from the main site's `config.js`; no keys) |
+| `assets/js/cinema-engine.js` | 8-second panel player, room tone, library, reader |
+| `assets/data/library.json` | Everything published: films, stories, articles |
+| `assets/data/baribari-panels.json`, `characters.json` | Production archive for BARIBARI |
+
+Navigation and footer markup match `components/navigation.html.reference` and `components/footer.html.reference` on the main site, with absolute `https://squargraph.com/...` links. Two additions: a "Chronicle" item in the nav and an "AxisChronicle" link in the footer's Ecosystem column.
+
+## Publishing new work
+
+See `CONTENT_UPDATE_GUIDE.md`.
+
+## Local preview
+
+The page loads its data with `fetch`, so use a local server rather than opening the file directly:
 
 ```
-axischronicle/
-├── index.html                    # Complete standalone production page
-├── README.md                     # Architectural documentation
-├── assets/
-│   ├── css/
-│   │   └── axis-theme.css        # SQUARGRAPH design system, tokens & layouts
-│   ├── js/
-│   │   └── cinema-engine.js      # 8s panel player, Web Audio drone, drawer
-│   ├── data/
-│   │   ├── baribari-panels.json  # 75 structured panels for flagship original
-│   │   ├── characters.json       # Character continuity bible
-│   │   └── editorial.json        # 4 architectural essays & field notes
-│   ├── fonts/
-│   │   ├── Satoshi-Regular.woff  # Embedded local Satoshi typeface
-│   │   ├── Satoshi-Medium.woff
-│   │   └── Satoshi-Bold.woff
-│   └── logo/
-│       ├── axischronicle-logo.svg
-│       ├── axischronicle-mark.svg
-│       ├── axischronicle-favicon.svg
-│       └── squargraph_g_no_inner_ending.svg
+python3 -m http.server 8765
 ```
 
----
+## Deployment
 
-## 🖥️ Local Preview & Verification
+Deploy the folder root to Cloudflare Pages (or Workers static assets) and bind `axischronicle.squargraph.com`. `_headers` carries the same security headers as the main site, adjusted for this site.
 
-To preview the platform locally, open [`index.html`](file:///C:/Users/Rentorzo/.gemini/antigravity/scratch/axischronicle/index.html) in any modern web browser:
-```powershell
-Start-Process "C:\Users\Rentorzo\.gemini\antigravity\scratch\axischronicle\index.html"
-```
-Or serve via any static file server (e.g. `npx serve`, Python `http.server`, or VS Code Live Server).
+## Design rules (from the SQUARGRAPH guardrails)
 
----
-
-## 🌐 Deployment
-
-### Subdomain Deployment (`axischronicle.squargraph.com`):
-Deploy the `axischronicle` directory to **Cloudflare Pages** or **Vercel**:
-1. Drop the `axischronicle` folder into [Vercel Drop](https://vercel.com/drop) or link to a dedicated git repository.
-2. In Project Settings → Domains, bind `axischronicle.squargraph.com`.
-3. Set the CNAME record in your Cloudflare DNS dashboard pointing to your deployment target.
+Satoshi only. Ink `#1A1714`, Forest `#394536`, Moss `#657158`, cream `#F8F6F1`, muted gold `#B48A4A` used sparingly. Maximum 8px radius on cards, pill buttons and inputs, no italics, no purple, no decorative blobs. See the main site's `DESIGN_GUARDRAILS.md`.
