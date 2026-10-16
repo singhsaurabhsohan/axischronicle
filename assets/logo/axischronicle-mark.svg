@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-labelledby="title desc">
+  <title id="title">AxisChronicle emblem</title>
+  <desc id="desc">SQUARGRAPH's white open-diamond symbol inside a forest-green circle.</desc>
+  <circle cx="64" cy="64" r="64" fill="#1C3025"/>
+  <path d="M64 20 18 64 64 108 112 64 89 42" fill="none" stroke="#FAFAF9" stroke-width="6" stroke-linecap="butt" stroke-linejoin="bevel"/>
+</svg>

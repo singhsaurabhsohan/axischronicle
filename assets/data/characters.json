@@ -1,0 +1,49 @@
+[
+  {
+    "id": "saurabh",
+    "name": "Saurabh",
+    "role": "Protagonist / Observer",
+    "castSpecification": "25-year-old South Asian man with short dark hair, subtle stubble, expressive dark eyes, approachable everyday appearance, natural posture, restrained 35mm film realism.",
+    "wardrobe": [
+      {
+        "phase": "Opening Lane (Panels 001–016)",
+        "attire": "Light casual shirt, casual trousers, riding footwear."
+      },
+      {
+        "phase": "The Shift & Night (Panels 017–075)",
+        "attire": "Black utility jacket over a plain black crewneck T-shirt, dark trousers, heavy black leather boots."
+      }
+    ],
+    "continuityRules": "Strictly maintain identical facial bone structure, hair, build, and proportions across all 75 storyboard panels. Keep the black outfit unchanged through the shortcut maze, shop, party, and night walk. Bicycle, keys, and phone remain consistent physical props."
+  },
+  {
+    "id": "baribari",
+    "name": "Baribari",
+    "role": "The Enigma / Shopkeeper",
+    "castSpecification": "South Asian woman in her early 20s with deep expressive dark eyes, black hair neatly pulled back, composed, quietly humorous and magnetic expression. Confident without posing.",
+    "wardrobe": [
+      {
+        "phase": "Shop & Gathering",
+        "attire": "Deep burgundy/maroon embroidered salwar-kameez with matching dupatta, understated earrings, simple bracelets."
+      },
+      {
+        "phase": "Night Walk",
+        "attire": "Same burgundy ensemble with a light protective shawl draped over the shoulders."
+      }
+    ],
+    "continuityRules": "Unchanging distinct facial identity and South Asian heritage throughout. Surname is never displayed, invented, or spoken on screen. Her emotional demeanor shifts from initial cautious vigilance to quiet warmth, ending in the sudden mysterious collapse."
+  },
+  {
+    "id": "women-old-house",
+    "name": "Women at the Great House",
+    "role": "The Catalyst / Dejá Vu",
+    "castSpecification": "Three visibly distinct South Asian women framed in an open upper window above a stone boundary wall and metal railing. Never duplicate faces.",
+    "wardrobe": [
+      {
+        "phase": "Window Vignette (Panels 006–018)",
+        "attire": "Rich red and black traditional South Asian textiles, each uniquely draped."
+      }
+    ],
+    "continuityRules": "One older matriarch, one woman in her mid-twenties, one younger adult. One gestures with a subtle beckoning motion while the other two observe with inscrutable stillness."
+  }
+]

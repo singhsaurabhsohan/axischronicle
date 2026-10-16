@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 1120" role="img" aria-labelledby="title desc">
+  <title id="title">AxisChronicle logo explorations using the SQUARGRAPH emblem</title>
+  <desc id="desc">Three dark-background logo lockups use the SQUARGRAPH green circle and white open diamond: inline, emblem separator, and stacked badge.</desc>
+  <style>
+    @font-face { font-family: Satoshi; src: url("../../fonts/Satoshi-Regular.woff") format("woff"); font-weight: 400; }
+    @font-face { font-family: Satoshi; src: url("../../fonts/Satoshi-Medium.woff") format("woff"); font-weight: 500; }
+    @font-face { font-family: Satoshi; src: url("../../fonts/Satoshi-Bold.woff") format("woff"); font-weight: 700; }
+    .head { font-family: Satoshi, Arial, sans-serif; }
+  </style>
+  <rect width="1400" height="1120" fill="#090A09"/>
+  <text class="head" x="76" y="76" fill="#D8E9A1" font-size="14" font-weight="500" letter-spacing="3">AXISCHRONICLE  /  SQUARGRAPH EMBLEM STUDIES</text>
+  <text class="head" x="76" y="119" fill="#FAFAF9" font-size="29" font-weight="500" letter-spacing=".4">Three lockups. One shared symbol.</text>
+  <text class="head" x="76" y="151" fill="#A9AAA2" font-size="14" font-weight="400" letter-spacing=".2">The circular forest-green badge and open-diamond mark carry SQUARGRAPH's visual signature into the film identity.</text>
+
+  <g>
+    <rect x="64" y="184" width="1272" height="270" rx="4" fill="#101410" stroke="#394536"/>
+    <text class="head" x="96" y="225" fill="#D8E9A1" font-size="12" font-weight="500" letter-spacing="2">01  /  SIGNATURE INLINE</text>
+    <text class="head" x="96" y="257" fill="#A9AAA2" font-size="14">Emblem leads;</text>
+    <text class="head" x="96" y="278" fill="#A9AAA2" font-size="14">wordmark follows.</text>
+    <text class="head" x="96" y="416" fill="#657158" font-size="10" font-weight="500" letter-spacing="1.3">BEST FOR SITE HEADER</text>
+    <g transform="translate(440 259) scale(.82)">
+      <circle cx="64" cy="64" r="64" fill="#1C3025"/>
+      <path d="M64 20 18 64 64 108 112 64 89 42" fill="none" stroke="#FAFAF9" stroke-width="6" stroke-linecap="butt" stroke-linejoin="bevel"/>
+    </g>
+    <text class="head" x="570" y="325" fill="#FAFAF9" font-size="43" font-weight="700" letter-spacing="2.3">AXIS</text>
+    <circle cx="695" cy="310" r="3" fill="#D8E9A1"/>
+    <text class="head" x="714" y="325" fill="#FAFAF9" font-size="43" font-weight="500" letter-spacing="2.3">CHRONICLE</text>
+    <text class="head" x="573" y="357" fill="#A9AAA2" font-size="10" font-weight="500" letter-spacing="2">AN ORIGINAL IP BY SQUARGRAPH™</text>
+  </g>
+
+  <g>
+    <rect x="64" y="475" width="1272" height="270" rx="4" fill="#101410" stroke="#394536"/>
+    <text class="head" x="96" y="516" fill="#D8E9A1" font-size="12" font-weight="500" letter-spacing="2">02  /  EMBLEM AS SEPARATOR</text>
+    <text class="head" x="96" y="548" fill="#A9AAA2" font-size="14">The symbol sits</text>
+    <text class="head" x="96" y="569" fill="#A9AAA2" font-size="14">inside the name.</text>
+    <text class="head" x="96" y="707" fill="#657158" font-size="10" font-weight="500" letter-spacing="1.3">MOST DISTINCTIVE</text>
+    <text class="head" x="390" y="631" fill="#FAFAF9" font-size="42" font-weight="700" letter-spacing="2">AXIS</text>
+    <g transform="translate(568 563) scale(.66)">
+      <circle cx="64" cy="64" r="64" fill="#1C3025"/>
+      <path d="M64 20 18 64 64 108 112 64 89 42" fill="none" stroke="#FAFAF9" stroke-width="6" stroke-linecap="butt" stroke-linejoin="bevel"/>
+    </g>
+    <text class="head" x="676" y="631" fill="#FAFAF9" font-size="42" font-weight="500" letter-spacing="2">CHRONICLE</text>
+    <text class="head" x="680" y="663" fill="#A9AAA2" font-size="10" font-weight="500" letter-spacing="2">AN ORIGINAL IP BY SQUARGRAPH™</text>
+  </g>
+
+  <g>
+    <rect x="64" y="766" width="1272" height="292" rx="4" fill="#101410" stroke="#394536"/>
+    <text class="head" x="96" y="807" fill="#D8E9A1" font-size="12" font-weight="500" letter-spacing="2">03  /  STACKED BADGE</text>
+    <text class="head" x="96" y="839" fill="#A9AAA2" font-size="14">A centered seal</text>
+    <text class="head" x="96" y="860" fill="#A9AAA2" font-size="14">for posters and covers.</text>
+    <text class="head" x="96" y="1018" fill="#657158" font-size="10" font-weight="500" letter-spacing="1.3">BEST FOR TITLE CARDS</text>
+    <g transform="translate(840 790) scale(.72)">
+      <circle cx="64" cy="64" r="64" fill="#1C3025"/>
+      <path d="M64 20 18 64 64 108 112 64 89 42" fill="none" stroke="#FAFAF9" stroke-width="6" stroke-linecap="butt" stroke-linejoin="bevel"/>
+    </g>
+    <text class="head" x="932" y="917" text-anchor="middle" fill="#FAFAF9" font-size="37" font-weight="700" letter-spacing="3">AXIS</text>
+    <text class="head" x="932" y="958" text-anchor="middle" fill="#D8E9A1" font-size="23" font-weight="500" letter-spacing="6">CHRONICLE</text>
+    <path d="M842 981H1022" stroke="#394536"/>
+    <text class="head" x="932" y="1005" text-anchor="middle" fill="#A9AAA2" font-size="9" font-weight="500" letter-spacing="1.8">AN ORIGINAL IP BY SQUARGRAPH™</text>
+  </g>
+</svg>

@@ -1,0 +1,602 @@
+[
+  {
+    "panel": 1,
+    "id": "P001",
+    "startTime": "00:00",
+    "endTime": "00:08",
+    "scene": "EXT. QUIET RESIDENTIAL LANE — DUSK",
+    "direction": "Close tracking shot of a bicycle wheel rolling along a quiet Indian residential lane."
+  },
+  {
+    "panel": 2,
+    "id": "P002",
+    "startTime": "00:08",
+    "endTime": "00:16",
+    "scene": "EXT. QUIET RESIDENTIAL LANE — DUSK",
+    "direction": "Saurabh pedals toward a party in casual non-black clothes; keep his face consistent."
+  },
+  {
+    "panel": 3,
+    "id": "P003",
+    "startTime": "00:16",
+    "endTime": "00:24",
+    "scene": "EXT. QUIET RESIDENTIAL LANE — DUSK",
+    "direction": "Wide view of modest homes, trees, overhead wires, and amber evening light."
+  },
+  {
+    "panel": 4,
+    "id": "P004",
+    "startTime": "00:24",
+    "endTime": "00:32",
+    "scene": "EXT. QUIET RESIDENTIAL LANE — DUSK",
+    "direction": "A large house appears on Saurabh’s right behind an old stone wall and railing."
+  },
+  {
+    "panel": 5,
+    "id": "P005",
+    "startTime": "00:32",
+    "endTime": "00:40",
+    "scene": "EXT. QUIET RESIDENTIAL LANE — DUSK",
+    "direction": "He slows as he notices an open upper window above the boundary wall."
+  },
+  {
+    "panel": 6,
+    "id": "P006",
+    "startTime": "00:40",
+    "endTime": "00:48",
+    "scene": "EXT. QUIET RESIDENTIAL LANE — DUSK",
+    "direction": "Three South Asian women, each with a distinct face, look out in red and black traditional clothes."
+  },
+  {
+    "panel": 7,
+    "id": "P007",
+    "startTime": "00:48",
+    "endTime": "00:56",
+    "scene": "EXT. QUIET RESIDENTIAL LANE — DUSK",
+    "direction": "One woman beckons him toward the house while the other two watch curiously."
+  },
+  {
+    "panel": 8,
+    "id": "P008",
+    "startTime": "00:56",
+    "endTime": "01:04",
+    "scene": "EXT. QUIET RESIDENTIAL LANE — DUSK",
+    "direction": "Saurabh rides a few metres on, then turns his head back toward the window."
+  },
+  {
+    "panel": 9,
+    "id": "P009",
+    "startTime": "01:04",
+    "endTime": "01:12",
+    "scene": "EXT. GREAT HOUSE WINDOW AND BOUNDARY WALL — DUSK",
+    "direction": "From Saurabh’s viewpoint, the three distinct women look down from the open window."
+  },
+  {
+    "panel": 10,
+    "id": "P010",
+    "startTime": "01:12",
+    "endTime": "01:20",
+    "scene": "EXT. GREAT HOUSE WINDOW AND BOUNDARY WALL — DUSK",
+    "direction": "The railing crosses the view between the women and Saurabh on the road."
+  },
+  {
+    "panel": 11,
+    "id": "P011",
+    "startTime": "01:20",
+    "endTime": "01:28",
+    "scene": "EXT. GREAT HOUSE WINDOW AND BOUNDARY WALL — DUSK",
+    "direction": "Saurabh wonders whether they can see his face but not his clothes."
+  },
+  {
+    "panel": 12,
+    "id": "P012",
+    "startTime": "01:28",
+    "endTime": "01:36",
+    "scene": "EXT. GREAT HOUSE WINDOW AND BOUNDARY WALL — DUSK",
+    "direction": "He looks down at the casual outfit he wore to leave for the party."
+  },
+  {
+    "panel": 13,
+    "id": "P013",
+    "startTime": "01:36",
+    "endTime": "01:44",
+    "scene": "EXT. GREAT HOUSE WINDOW AND BOUNDARY WALL — DUSK",
+    "direction": "A sudden déjà vu crosses his face; he feels he has seen these women before."
+  },
+  {
+    "panel": 14,
+    "id": "P014",
+    "startTime": "01:44",
+    "endTime": "01:52",
+    "scene": "EXT. GREAT HOUSE WINDOW AND BOUNDARY WALL — DUSK",
+    "direction": "He murmurs, “I feel like I’ve met them before.”"
+  },
+  {
+    "panel": 15,
+    "id": "P015",
+    "startTime": "01:52",
+    "endTime": "02:00",
+    "scene": "EXT. GREAT HOUSE WINDOW AND BOUNDARY WALL — DUSK",
+    "direction": "He realizes he may have accidentally worn the same clothes again."
+  },
+  {
+    "panel": 16,
+    "id": "P016",
+    "startTime": "02:00",
+    "endTime": "02:08",
+    "scene": "EXT. GREAT HOUSE WINDOW AND BOUNDARY WALL — DUSK",
+    "direction": "Saurabh turns his bicycle around and heads home to change."
+  },
+  {
+    "panel": 17,
+    "id": "P017",
+    "startTime": "02:08",
+    "endTime": "02:16",
+    "scene": "INT. SAURABH’S HOME — DUSK",
+    "direction": "Saurabh wheels his bicycle into his modest home and goes straight to his room."
+  },
+  {
+    "panel": 18,
+    "id": "P018",
+    "startTime": "02:16",
+    "endTime": "02:24",
+    "scene": "INT. SAURABH’S HOME — DUSK",
+    "direction": "He looks at the casual clothes he wore on the ride to the party."
+  },
+  {
+    "panel": 19,
+    "id": "P019",
+    "startTime": "02:24",
+    "endTime": "02:32",
+    "scene": "INT. SAURABH’S HOME — DUSK",
+    "direction": "He lays out black trousers, a plain black T-shirt, a black jacket, and black boots."
+  },
+  {
+    "panel": 20,
+    "id": "P020",
+    "startTime": "02:32",
+    "endTime": "02:40",
+    "scene": "INT. SAURABH’S HOME — DUSK",
+    "direction": "He changes into the black trousers and T-shirt."
+  },
+  {
+    "panel": 21,
+    "id": "P021",
+    "startTime": "02:40",
+    "endTime": "02:48",
+    "scene": "INT. SAURABH’S HOME — DUSK",
+    "direction": "He puts on the black jacket and heavy black boots."
+  },
+  {
+    "panel": 22,
+    "id": "P022",
+    "startTime": "02:48",
+    "endTime": "02:56",
+    "scene": "INT. SAURABH’S HOME — DUSK",
+    "direction": "A mirror shot confirms his all-black outfit and the same face."
+  },
+  {
+    "panel": 23,
+    "id": "P023",
+    "startTime": "02:56",
+    "endTime": "03:04",
+    "scene": "INT. SAURABH’S HOME — DUSK",
+    "direction": "Saurabh leaves home on his bicycle, now dressed in black."
+  },
+  {
+    "panel": 24,
+    "id": "P024",
+    "startTime": "03:04",
+    "endTime": "03:12",
+    "scene": "EXT. LANE AND INT. SHORTCUT HOUSE — EVENING",
+    "direction": "Saurabh rides back along the same lane in his all-black outfit."
+  },
+  {
+    "panel": 25,
+    "id": "P025",
+    "startTime": "03:12",
+    "endTime": "03:20",
+    "scene": "EXT. LANE AND INT. SHORTCUT HOUSE — EVENING",
+    "direction": "He passes the great house again and continues toward the party route."
+  },
+  {
+    "panel": 26,
+    "id": "P026",
+    "startTime": "03:20",
+    "endTime": "03:28",
+    "scene": "EXT. LANE AND INT. SHORTCUT HOUSE — EVENING",
+    "direction": "He sees an open entrance in a house beside the road and considers it a shortcut."
+  },
+  {
+    "panel": 27,
+    "id": "P027",
+    "startTime": "03:28",
+    "endTime": "03:36",
+    "scene": "EXT. LANE AND INT. SHORTCUT HOUSE — EVENING",
+    "direction": "He leaves his bicycle near the entrance and walks inside."
+  },
+  {
+    "panel": 28,
+    "id": "P028",
+    "startTime": "03:36",
+    "endTime": "03:44",
+    "scene": "EXT. LANE AND INT. SHORTCUT HOUSE — EVENING",
+    "direction": "A bare concrete hallway stretches ahead; the street entrance fades behind him."
+  },
+  {
+    "panel": 29,
+    "id": "P029",
+    "startTime": "03:44",
+    "endTime": "03:52",
+    "scene": "EXT. LANE AND INT. SHORTCUT HOUSE — EVENING",
+    "direction": "He turns through a doorway, expecting it to lead to the other side."
+  },
+  {
+    "panel": 30,
+    "id": "P030",
+    "startTime": "03:52",
+    "endTime": "04:00",
+    "scene": "EXT. LANE AND INT. SHORTCUT HOUSE — EVENING",
+    "direction": "The doorway opens into another similar corridor."
+  },
+  {
+    "panel": 31,
+    "id": "P031",
+    "startTime": "04:00",
+    "endTime": "04:08",
+    "scene": "EXT. LANE AND INT. SHORTCUT HOUSE — EVENING",
+    "direction": "Saurabh tries left and right turns, searching for the road."
+  },
+  {
+    "panel": 32,
+    "id": "P032",
+    "startTime": "04:08",
+    "endTime": "04:16",
+    "scene": "EXT. LANE AND INT. SHORTCUT HOUSE — EVENING",
+    "direction": "He reaches a metal exit door and finds it will not open."
+  },
+  {
+    "panel": 33,
+    "id": "P033",
+    "startTime": "04:16",
+    "endTime": "04:24",
+    "scene": "EXT. LANE AND INT. SHORTCUT HOUSE — EVENING",
+    "direction": "He retraces his steps and returns to a familiar junction."
+  },
+  {
+    "panel": 34,
+    "id": "P034",
+    "startTime": "04:24",
+    "endTime": "04:32",
+    "scene": "EXT. LANE AND INT. SHORTCUT HOUSE — EVENING",
+    "direction": "He recognizes a crack in the wall and realizes he has looped back."
+  },
+  {
+    "panel": 35,
+    "id": "P035",
+    "startTime": "04:32",
+    "endTime": "04:40",
+    "scene": "EXT. LANE AND INT. SHORTCUT HOUSE — EVENING",
+    "direction": "A warm glow from a small shop-like partition appears down the hall."
+  },
+  {
+    "panel": 36,
+    "id": "P036",
+    "startTime": "04:40",
+    "endTime": "04:48",
+    "scene": "EXT. LANE AND INT. SHORTCUT HOUSE — EVENING",
+    "direction": "He notices it but decides to keep searching without asking for help."
+  },
+  {
+    "panel": 37,
+    "id": "P037",
+    "startTime": "04:48",
+    "endTime": "04:56",
+    "scene": "EXT. LANE AND INT. SHORTCUT HOUSE — EVENING",
+    "direction": "He tries another corridor and reaches a dead end."
+  },
+  {
+    "panel": 38,
+    "id": "P038",
+    "startTime": "04:56",
+    "endTime": "05:04",
+    "scene": "EXT. LANE AND INT. SHORTCUT HOUSE — EVENING",
+    "direction": "Saurabh leans against the concrete wall, tired and breathing harder."
+  },
+  {
+    "panel": 39,
+    "id": "P039",
+    "startTime": "05:04",
+    "endTime": "05:12",
+    "scene": "EXT. LANE AND INT. SHORTCUT HOUSE — EVENING",
+    "direction": "Finally he turns toward the shop and knocks politely on its shutter."
+  },
+  {
+    "panel": 40,
+    "id": "P040",
+    "startTime": "05:12",
+    "endTime": "05:20",
+    "scene": "INT. SHOP PARTITION AND EXIT HALL — EVENING",
+    "direction": "The metal shutter rises, revealing Baribari in her consistent maroon traditional outfit."
+  },
+  {
+    "panel": 41,
+    "id": "P041",
+    "startTime": "05:20",
+    "endTime": "05:28",
+    "scene": "INT. SHOP PARTITION AND EXIT HALL — EVENING",
+    "direction": "Hold on Baribari’s distinct face as she looks at Saurabh cautiously and asks, “Who are you?”"
+  },
+  {
+    "panel": 42,
+    "id": "P042",
+    "startTime": "05:28",
+    "endTime": "05:36",
+    "scene": "INT. SHOP PARTITION AND EXIT HALL — EVENING",
+    "direction": "Baribari follows with, “How did you get in here?”"
+  },
+  {
+    "panel": 43,
+    "id": "P043",
+    "startTime": "05:36",
+    "endTime": "05:44",
+    "scene": "INT. SHOP PARTITION AND EXIT HALL — EVENING",
+    "direction": "Saurabh explains, “I came through the house to take a shortcut, but I’m lost.”"
+  },
+  {
+    "panel": 44,
+    "id": "P044",
+    "startTime": "05:44",
+    "endTime": "05:52",
+    "scene": "INT. SHOP PARTITION AND EXIT HALL — EVENING",
+    "direction": "He asks, “Could you please open the exit shutter for me?”"
+  },
+  {
+    "panel": 45,
+    "id": "P045",
+    "startTime": "05:52",
+    "endTime": "06:00",
+    "scene": "INT. SHOP PARTITION AND EXIT HALL — EVENING",
+    "direction": "Baribari studies him, then turns to the exit lock."
+  },
+  {
+    "panel": 46,
+    "id": "P046",
+    "startTime": "06:00",
+    "endTime": "06:08",
+    "scene": "INT. SHOP PARTITION AND EXIT HALL — EVENING",
+    "direction": "She unlocks the exit shutter and raises it, revealing the way out."
+  },
+  {
+    "panel": 47,
+    "id": "P047",
+    "startTime": "06:08",
+    "endTime": "06:16",
+    "scene": "INT. SHOP PARTITION AND EXIT HALL — EVENING",
+    "direction": "Saurabh thanks her; they step toward the counter and begin talking."
+  },
+  {
+    "panel": 48,
+    "id": "P048",
+    "startTime": "06:16",
+    "endTime": "06:24",
+    "scene": "INT. SHOP PARTITION AND EXIT HALL — EVENING",
+    "direction": "He jokes, “That shortcut has more turns than the whole road.” Baribari laughs, impressed."
+  },
+  {
+    "panel": 49,
+    "id": "P049",
+    "startTime": "06:24",
+    "endTime": "06:32",
+    "scene": "INT. SHOP PARTITION AND EXIT HALL — EVENING",
+    "direction": "Saurabh asks her name; she replies, “Baribari.”"
+  },
+  {
+    "panel": 50,
+    "id": "P050",
+    "startTime": "06:32",
+    "endTime": "06:40",
+    "scene": "INT. SHOP PARTITION — EVENING",
+    "direction": "Saurabh repeats softly, “Baribari,” and says he has never heard the name before."
+  },
+  {
+    "panel": 51,
+    "id": "P051",
+    "startTime": "06:40",
+    "endTime": "06:48",
+    "scene": "INT. SHOP PARTITION — EVENING",
+    "direction": "He asks for her surname so he can find her later; Baribari tells him. Do not invent or display it."
+  },
+  {
+    "panel": 52,
+    "id": "P052",
+    "startTime": "06:48",
+    "endTime": "06:56",
+    "scene": "INT. SHOP PARTITION — EVENING",
+    "direction": "In their conversation, Saurabh learns that Baribari is Muslim; he listens respectfully."
+  },
+  {
+    "panel": 53,
+    "id": "P053",
+    "startTime": "06:56",
+    "endTime": "07:04",
+    "scene": "INT. SHOP PARTITION — EVENING",
+    "direction": "They exchange phones and type their own numbers directly into each other’s contacts."
+  },
+  {
+    "panel": 54,
+    "id": "P054",
+    "startTime": "07:04",
+    "endTime": "07:12",
+    "scene": "INT. SHOP PARTITION — EVENING",
+    "direction": "Keep every phone number unreadable; show no map, party invitation, or extra message."
+  },
+  {
+    "panel": 55,
+    "id": "P055",
+    "startTime": "07:12",
+    "endTime": "07:20",
+    "scene": "INT. SHOP PARTITION — EVENING",
+    "direction": "Baribari invites him to relax at the shop; Saurabh asks her to come to the party instead."
+  },
+  {
+    "panel": 56,
+    "id": "P056",
+    "startTime": "07:20",
+    "endTime": "07:28",
+    "scene": "INT. SHOP PARTITION — EVENING",
+    "direction": "She smiles and agrees; they leave together through the exit."
+  },
+  {
+    "panel": 57,
+    "id": "P057",
+    "startTime": "07:28",
+    "endTime": "07:36",
+    "scene": "INT. PARTY HOUSE — NIGHT",
+    "direction": "Saurabh and Baribari arrive together at a warm, modest house party."
+  },
+  {
+    "panel": 58,
+    "id": "P058",
+    "startTime": "07:36",
+    "endTime": "07:44",
+    "scene": "INT. PARTY HOUSE — NIGHT",
+    "direction": "Saurabh introduces Baribari to his friends by her first name."
+  },
+  {
+    "panel": 59,
+    "id": "P059",
+    "startTime": "07:44",
+    "endTime": "07:52",
+    "scene": "INT. PARTY HOUSE — NIGHT",
+    "direction": "His friends assume she is his girlfriend and say they look good together."
+  },
+  {
+    "panel": 60,
+    "id": "P060",
+    "startTime": "07:52",
+    "endTime": "08:00",
+    "scene": "INT. PARTY HOUSE — NIGHT",
+    "direction": "Baribari and Saurabh smile happily and do not correct the assumption."
+  },
+  {
+    "panel": 61,
+    "id": "P061",
+    "startTime": "08:00",
+    "endTime": "08:08",
+    "scene": "INT. PARTY HOUSE — NIGHT",
+    "direction": "They spend time with the group, comfortable beside each other."
+  },
+  {
+    "panel": 62,
+    "id": "P062",
+    "startTime": "08:08",
+    "endTime": "08:16",
+    "scene": "INT. PARTY HOUSE — NIGHT",
+    "direction": "Later they sit together by a window, sharing a quiet, warm moment."
+  },
+  {
+    "panel": 63,
+    "id": "P063",
+    "startTime": "08:16",
+    "endTime": "08:24",
+    "scene": "INT. PARTY HOUSE — NIGHT",
+    "direction": "The party winds down; they leave together to walk her home."
+  },
+  {
+    "panel": 64,
+    "id": "P064",
+    "startTime": "08:24",
+    "endTime": "08:32",
+    "scene": "EXT. NIGHT STREET AND SMALL HOME GATE — NIGHT",
+    "direction": "Saurabh walks Baribari home along a quiet street after the party."
+  },
+  {
+    "panel": 65,
+    "id": "P065",
+    "startTime": "08:32",
+    "endTime": "08:40",
+    "scene": "EXT. NIGHT STREET AND SMALL HOME GATE — NIGHT",
+    "direction": "Without warning, Baribari suddenly becomes unconscious and begins to fall."
+  },
+  {
+    "panel": 66,
+    "id": "P066",
+    "startTime": "08:40",
+    "endTime": "08:48",
+    "scene": "EXT. NIGHT STREET AND SMALL HOME GATE — NIGHT",
+    "direction": "Saurabh catches her, calls her name, and receives no response."
+  },
+  {
+    "panel": 67,
+    "id": "P067",
+    "startTime": "08:48",
+    "endTime": "08:56",
+    "scene": "EXT. NIGHT STREET AND SMALL HOME GATE — NIGHT",
+    "direction": "He lifts her onto his back and carries her carefully toward her home."
+  },
+  {
+    "panel": 68,
+    "id": "P068",
+    "startTime": "08:56",
+    "endTime": "09:04",
+    "scene": "EXT. NIGHT STREET AND SMALL HOME GATE — NIGHT",
+    "direction": "They reach a small gate with a narrow opening and rough wall."
+  },
+  {
+    "panel": 69,
+    "id": "P069",
+    "startTime": "09:04",
+    "endTime": "09:12",
+    "scene": "EXT. NIGHT STREET AND SMALL HOME GATE — NIGHT",
+    "direction": "He softly tells her to hold on, grips the wall top, and keeps her waist clear of it."
+  },
+  {
+    "panel": 70,
+    "id": "P070",
+    "startTime": "09:12",
+    "endTime": "09:20",
+    "scene": "EXT. NIGHT STREET AND SMALL HOME GATE — NIGHT",
+    "direction": "Baribari slips backward; Saurabh catches her immediately in a protective hold."
+  },
+  {
+    "panel": 71,
+    "id": "P071",
+    "startTime": "09:20",
+    "endTime": "09:28",
+    "scene": "INT. BARIBARI’S HOME AND SAURABH’S BEDROOM — NIGHT / MORNING",
+    "direction": "Saurabh carries Baribari safely through the gate and into her home."
+  },
+  {
+    "panel": 72,
+    "id": "P072",
+    "startTime": "09:28",
+    "endTime": "09:36",
+    "scene": "INT. BARIBARI’S HOME AND SAURABH’S BEDROOM — NIGHT / MORNING",
+    "direction": "He calls her family and explains exactly that she became unconscious on their walk home and he carried her through the narrow gate."
+  },
+  {
+    "panel": 73,
+    "id": "P073",
+    "startTime": "09:36",
+    "endTime": "09:44",
+    "scene": "INT. BARIBARI’S HOME AND SAURABH’S BEDROOM — NIGHT / MORNING",
+    "direction": "He watches with concern, feeling he never wants to lose her and wants a life with her."
+  },
+  {
+    "panel": 74,
+    "id": "P074",
+    "startTime": "09:44",
+    "endTime": "09:52",
+    "scene": "INT. BARIBARI’S HOME AND SAURABH’S BEDROOM — NIGHT / MORNING",
+    "direction": "A bright flare transitions from night to pale morning light in Saurabh’s real bedroom."
+  },
+  {
+    "panel": 75,
+    "id": "P075",
+    "startTime": "09:52",
+    "endTime": "10:00",
+    "scene": "INT. BARIBARI’S HOME AND SAURABH’S BEDROOM — NIGHT / MORNING",
+    "direction": "Saurabh wakes abruptly; he remembers “Baribari” but cannot recall her surname. Fade to black."
+  }
+]

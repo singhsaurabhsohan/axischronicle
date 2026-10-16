@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 940 160" role="img" aria-labelledby="title desc">
+  <title id="title">AxisChronicle — emblem separator lockup</title>
+  <desc id="desc">The SQUARGRAPH circular open-diamond emblem separates AXIS and CHRONICLE.</desc>
+  <style>
+    @font-face { font-family: Satoshi; src: url("../../fonts/Satoshi-Regular.woff") format("woff"); font-weight: 400; }
+    @font-face { font-family: Satoshi; src: url("../../fonts/Satoshi-Medium.woff") format("woff"); font-weight: 500; }
+    @font-face { font-family: Satoshi; src: url("../../fonts/Satoshi-Bold.woff") format("woff"); font-weight: 700; }
+    .word { font-family: Satoshi, Arial, sans-serif; font-size: 44px; letter-spacing: 2.4px; }
+  </style>
+  <text class="word" x="24" y="89" fill="#FAFAF9" font-weight="700">AXIS</text>
+  <g transform="translate(212 39) scale(.64)">
+    <circle cx="64" cy="64" r="64" fill="#1C3025"/>
+    <path d="M64 20 18 64 64 108 112 64 89 42" fill="none" stroke="#FAFAF9" stroke-width="6" stroke-linecap="butt" stroke-linejoin="bevel"/>
+  </g>
+  <text class="word" x="312" y="89" fill="#FAFAF9" font-weight="500">CHRONICLE</text>
+  <text x="316" y="120" fill="#A9AAA2" font-family="Satoshi, Arial, sans-serif" font-size="11" font-weight="500" letter-spacing="2.2">AN ORIGINAL IP BY SQUARGRAPH™</text>
+</svg>

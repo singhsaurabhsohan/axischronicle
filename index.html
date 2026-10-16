@@ -1,0 +1,622 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#070807">
+  <meta name="description" content="AxisChronicle is a premium digital media platform and arthouse storytelling engine. An independent, original IP created by SQUARGRAPH™ and filmmaker Saurabh Sohan Singh.">
+  <link rel="icon" type="image/svg+xml" href="./assets/logo/axischronicle-favicon.svg">
+  <title>AxisChronicle | Arthouse Cinema &amp; Editorial Archive | SQUARGRAPH™</title>
+  <link rel="stylesheet" href="./assets/css/axis-theme.css">
+</head>
+<body>
+  <a class="skip-link" href="#mainContent">Skip to cinema content</a>
+
+  <!-- Topline Status Bar -->
+  <div class="topline">
+    <div class="shell topline-inner">
+      <span>Cinema of the Unseen · Original Arthouse Stories</span>
+      <div class="topline-status">
+        <span>New Delhi / Everywhere</span>
+        <span>·</span>
+        <button class="topline-sound-btn" id="toplineSoundBtn" type="button" aria-label="Toggle ambient room-tone audio">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
+            <path d="M15.54 8.46a5 5 0 0 1 0 7.07"></path>
+          </svg>
+          <span id="soundStatusText">Sound: Ambient Drone</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Global Header -->
+  <header>
+    <div class="shell header-inner">
+      <a class="brand-lockup" href="#top" aria-label="AxisChronicle Home">
+        <div class="brand-symbol-wrap" title="SQUARGRAPH Open-Diamond Emblem">
+          <!-- SQUARGRAPH G Emblem without inner ending stroke -->
+          <svg class="brand-symbol-svg" viewBox="0 0 1000 1000" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <polygon fill="#FAFAF9" points="500,64.745 64.745,500 500,935.255 935.255,500 695,259.745 695,350.255 844.745,500 500,844.745 155.255,500 500,155.255"/>
+          </svg>
+        </div>
+        <div class="brand-text-group">
+          <span class="brand-title">AXIS<span>CHRONICLE</span></span>
+          <span class="brand-sub">An Original IP by <strong>SQUARGRAPH™</strong></span>
+        </div>
+      </a>
+
+      <button class="mobile-nav-toggle" id="mobileNavToggle" type="button" aria-expanded="false" aria-controls="navLinks">Menu</button>
+
+      <nav class="nav-links" id="navLinks" aria-label="Primary navigation">
+        <a href="#cinema">01 Cinema Stage</a>
+        <a href="#format">02 The 8s Form</a>
+        <a href="#screenplay">03 Screenplay Room</a>
+        <a href="#editorial">04 Written Archive</a>
+        <a href="#imprint">05 Imprint &amp; Method</a>
+      </nav>
+
+      <a class="nav-cta-btn" href="#cinema">
+        Launch Cinema Stage <span aria-hidden="true">↗</span>
+      </a>
+    </div>
+  </header>
+
+  <main id="mainContent">
+    <!-- Hero Section -->
+    <section class="hero-section" id="top" aria-labelledby="heroTitle">
+      <div class="hero-copy-col">
+        <p class="eyebrow"><span class="eyebrow-dot" aria-hidden="true"></span> Cinema of the Unseen · Issue 001</p>
+        <h1 class="h-hero" id="heroTitle">Stories stay<br>in the <em>dark.</em></h1>
+        <p class="hero-intro">
+          A dedicated home for slow-burn psychological thrillers, surreal mysteries, and long-form cinema assembled frame-by-frame out of precise eight-second panels paired with deep voiceover narration.
+        </p>
+
+        <div class="hero-actions">
+          <a class="btn-primary" href="#cinema">Enter First Original: BARIBARI ↘</a>
+          <a class="btn-secondary" href="#format">The 8-Second Principle</a>
+        </div>
+
+        <div class="hero-telemetry-grid">
+          <div class="telemetry-item">
+            <span class="label">Visual Engine</span>
+            <span class="value">8-Second Panels</span>
+          </div>
+          <div class="telemetry-item">
+            <span class="label">First Original</span>
+            <span class="value">BARIBARI (75 Panels)</span>
+          </div>
+          <div class="telemetry-item">
+            <span class="label">Studio &amp; IP</span>
+            <span class="value">SQUARGRAPH™</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-art-col">
+        <div class="hero-cinematic-card" role="region" aria-label="First Original Key Art Preview">
+          <div class="hero-art-grain" aria-hidden="true"></div>
+          <div class="hero-art-scene-sim" aria-hidden="true"></div>
+
+          <div class="hero-art-overlay">
+            <span class="badge-mono">Flagship Original · In Development</span>
+            <span class="badge-mono">16:9 · 24 FPS</span>
+          </div>
+
+          <div class="hero-art-bottom">
+            <span class="eyebrow" style="color: var(--accent); margin-bottom: 8px;">Key Art Study / 001</span>
+            <h2 class="hero-art-title">BARIBARI</h2>
+            <p class="hero-art-caption">
+              Written and directed by Saurabh Sohan Singh. A cyclist, a recurring concrete maze, an elusive encounter, and a dream that slips away at dawn.
+            </p>
+            <div style="margin-top: 18px;">
+              <a class="btn-secondary" style="font-size: 9.5px; padding: 0 16px; min-height: 40px;" href="#cinema">
+                Watch Frame Sequence <span aria-hidden="true">↗</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Ticker Principle Strip -->
+    <div class="ticker-strip" aria-label="AxisChronicle Principles">
+      <div class="ticker-content" aria-hidden="true">
+        <span>ORIGINAL STORIES <b>✳</b> EIGHT-SECOND CINEMA <b>✳</b> VOICE-LED NARRATIVES <b>✳</b> SLOW-BURN BY DESIGN <b>✳</b> THE FRAME IS THE SENTENCE <b>✳</b> AN ARTHOUSE ENGINE BY SQUARGRAPH™ <b>✳</b></span>
+        <span>ORIGINAL STORIES <b>✳</b> EIGHT-SECOND CINEMA <b>✳</b> VOICE-LED NARRATIVES <b>✳</b> SLOW-BURN BY DESIGN <b>✳</b> THE FRAME IS THE SENTENCE <b>✳</b> AN ARTHOUSE ENGINE BY SQUARGRAPH™ <b>✳</b></span>
+      </div>
+    </div>
+
+    <!-- 01 Cinema Stage (Interactive 8-Second Panel Player) -->
+    <section class="cinema-section" id="cinema" aria-labelledby="cinemaTitle">
+      <div class="shell">
+        <div class="section-header">
+          <div class="section-header-left">
+            <p class="eyebrow">01 / The Cinema Stage</p>
+            <h2 class="h-section" id="cinemaTitle">One story.<br>All the time it needs.</h2>
+          </div>
+          <p class="section-header-desc">
+            Experience the 8-second continuous cinematic stream. Each frame holds for exactly eight seconds while immersive voiceover and room-tone guide the interior narrative.
+          </p>
+        </div>
+
+        <!-- Cinema Player Component -->
+        <div class="player-stage-wrap" id="playerStage" tabindex="0" aria-label="Interactive Cinema Player">
+          <div class="player-screen">
+            <canvas class="player-canvas" id="cinemaCanvas" aria-label="BARIBARI scene canvas display"></canvas>
+
+            <div class="player-screen-topline">
+              <span class="player-film-title">BARIBARI · Written &amp; Directed by Saurabh Sohan Singh</span>
+              <span class="player-panel-counter" id="playerPanelCounter">PANEL 001 / 075</span>
+            </div>
+
+            <!-- 8s Timer Circle Countdown -->
+            <div class="panel-timer-ring" title="8-second panel progress">
+              <svg width="32" height="32" viewBox="0 0 32 32" aria-hidden="true">
+                <circle cx="16" cy="16" r="13" stroke="rgba(250,250,249,0.15)" stroke-width="2" fill="none"/>
+                <circle id="timerRingCircle" cx="16" cy="16" r="13" stroke="#d8e9a1" stroke-width="2.5" fill="none"
+                        stroke-dasharray="81.68" stroke-dashoffset="0" transform="rotate(-90 16 16)" style="transition: stroke-dashoffset 0.1s linear;"/>
+                <text id="timerCountdownText" x="16" y="20" fill="#fafaf9" font-size="9" font-weight="700" text-anchor="middle" font-family="Satoshi">8s</text>
+              </svg>
+            </div>
+
+            <!-- Synchronized Teleprompter -->
+            <div class="player-screen-bottom">
+              <div class="teleprompter-box">
+                <div class="teleprompter-scene" id="teleScene">EXT. QUIET RESIDENTIAL LANE — DUSK [00:00 — 00:08]</div>
+                <p class="teleprompter-direction" id="teleDirection">
+                  Close tracking shot of a bicycle wheel rolling along a quiet Indian residential lane.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Player Control Deck -->
+          <div class="player-deck">
+            <!-- Scrubber Bar with 8s Interval Ticks -->
+            <div class="deck-scrubber-bar" id="deckScrubber" role="slider" aria-label="Film panel scrubber" aria-valuemin="0" aria-valuemax="75" aria-valuenow="1">
+              <div class="deck-scrubber-progress" id="deckProgress"></div>
+              <div class="deck-scrubber-ticks" id="deckTicks"></div>
+            </div>
+
+            <div class="deck-controls-row">
+              <div class="deck-left-controls">
+                <button class="btn-deck-icon" id="btnPrev" type="button" aria-label="Previous 8-second panel">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="19 20 9 12 19 4 19 20"></polygon><line x1="5" y1="19" x2="5" y2="5"></line></svg>
+                </button>
+
+                <button class="btn-deck-icon btn-deck-play" id="btnPlay" type="button" aria-label="Play or pause cinema stream">
+                  <svg id="playIcon" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+                  <svg id="pauseIcon" width="18" height="18" viewBox="0 0 24 24" fill="currentColor" style="display: none;"><rect x="6" y="4" width="4" height="16"></rect><rect x="14" y="4" width="4" height="16"></rect></svg>
+                </button>
+
+                <button class="btn-deck-icon" id="btnNext" type="button" aria-label="Next 8-second panel">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="5 4 15 12 5 20 5 4"></polygon><line x1="19" y1="5" x2="19" y2="19"></line></svg>
+                </button>
+
+                <div class="deck-time-display">
+                  <strong id="deckCurrentTime">00:00</strong> / <span id="deckTotalTime">10:00</span>
+                </div>
+              </div>
+
+              <div class="deck-right-controls">
+                <button class="deck-btn-pill" id="btnAmbientAudio" type="button" aria-label="Toggle Web Audio room-tone synthesizer">
+                  Atmospheric Audio
+                </button>
+                <a class="deck-btn-pill" href="#screenplay">
+                  Read Script
+                </a>
+                <button class="deck-btn-pill" id="btnFullscreen" type="button" aria-label="Toggle fullscreen cinema mode">
+                  Cinema Fullscreen [F]
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Technical Metadata Summary -->
+        <div class="film-metadata-grid">
+          <div class="film-meta-box">
+            <div class="kicker">Original Title</div>
+            <div class="detail">BARIBARI</div>
+            <div class="subdetail">Written &amp; Directed by Saurabh Sohan Singh</div>
+          </div>
+          <div class="film-meta-box">
+            <div class="kicker">Architecture &amp; Pace</div>
+            <div class="detail">8 Seconds / Panel</div>
+            <div class="subdetail">75 Continuous Cinematic Frames</div>
+          </div>
+          <div class="film-meta-box">
+            <div class="kicker">Runtime &amp; Ratio</div>
+            <div class="detail">10 Min Cut (34 Min Feature)</div>
+            <div class="subdetail">16:9 Aspect Ratio · 24 FPS Reference</div>
+          </div>
+          <div class="film-meta-box">
+            <div class="kicker">Curatorial Inquiry</div>
+            <div class="detail">Private Screeners</div>
+            <button class="subdetail" data-open-inquiry style="color: var(--accent); text-decoration: underline; margin-top: 4px; cursor: pointer;">
+              Request Screener Access ↗
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 02 The 8-Second Form Section -->
+    <section class="format-section" id="format" aria-labelledby="formatTitle">
+      <div class="shell">
+        <div class="section-header">
+          <div class="section-header-left">
+            <p class="eyebrow">02 / The Form &amp; Narrative Geometry</p>
+            <h2 class="h-section" id="formatTitle">Eight seconds<br>can hold an entire world.</h2>
+          </div>
+          <p class="section-header-desc">
+            AxisChronicle rejects the frantic, sub-second editing of algorithmic social feeds. We define time as a measured sequence of deliberate architectural panels.
+          </p>
+        </div>
+
+        <div class="format-columns">
+          <div class="format-narrative">
+            <h3>Not an endless feed.<br>A mathematical sequence.</h3>
+            <p>
+              In our engine, each 8-second panel functions as a cognitive stanza. The voiceover delivers the interiority of the human mind—memory, hesitation, déjà vu, and unspoken terror—while the frame provides the austere physical geography in which those thoughts take form.
+            </p>
+            <p>
+              By holding each visual composition for a full eight seconds, the viewer's eye is allowed to wander: examining the geometry of stone railings, the texture of unlit corridors, and the delicate shifts of expression that hyper-kinetic commercial media erases.
+            </p>
+            <div style="margin-top: 32px;">
+              <a class="btn-primary" href="#editorial">Explore the Field Notes ↗</a>
+            </div>
+          </div>
+
+          <div class="format-panels-demo" aria-label="Sample 8-second panel sequence">
+            <div class="panel-demo-card">
+              <div class="panel-demo-visual v1"></div>
+              <div class="panel-demo-overlay">
+                <span class="badge-mono">Panel 001</span>
+                <span class="badge-mono">00:00–00:08</span>
+              </div>
+              <div class="panel-demo-bottom">
+                <strong>The Approach</strong>
+                <span>Tracking shot: Bicycle wheel on a quiet dusk lane</span>
+              </div>
+            </div>
+
+            <div class="panel-demo-card">
+              <div class="panel-demo-visual v2"></div>
+              <div class="panel-demo-overlay">
+                <span class="badge-mono">Panel 028</span>
+                <span class="badge-mono">03:36–03:44</span>
+              </div>
+              <div class="panel-demo-bottom">
+                <strong>The Concrete Maze</strong>
+                <span>Interior: Endless corridor with no exit door</span>
+              </div>
+            </div>
+
+            <div class="panel-demo-card">
+              <div class="panel-demo-visual v3"></div>
+              <div class="panel-demo-overlay">
+                <span class="badge-mono">Panel 040</span>
+                <span class="badge-mono">05:12–05:20</span>
+              </div>
+              <div class="panel-demo-bottom">
+                <strong>The Discovery</strong>
+                <span>Shutter rises: Meeting Baribari in burgundy</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 03 Screenplay & Continuity Room -->
+    <section class="screenplay-section" id="screenplay" aria-labelledby="screenplayTitle">
+      <div class="shell">
+        <div class="section-header">
+          <div class="section-header-left">
+            <p class="eyebrow">03 / The Production Archive</p>
+            <h2 class="h-section" id="screenplayTitle">Screenplay &amp; Continuity.</h2>
+          </div>
+          <p class="section-header-desc">
+            Inspect the exact panel-by-panel script and character continuity bibles used to construct BARIBARI. Click any panel to jump immediately to that frame in the Cinema Stage.
+          </p>
+        </div>
+
+        <div class="script-tabs" role="tablist">
+          <button class="script-tab-btn is-active" id="tabBtnScript" type="button" role="tab" aria-selected="true">
+            75-Panel Continuous Screenplay
+          </button>
+          <button class="script-tab-btn" id="tabBtnCharacters" type="button" role="tab" aria-selected="false">
+            Character Continuity Bible
+          </button>
+        </div>
+
+        <!-- Dynamic Screenplay Grid -->
+        <div class="script-grid-view" id="scriptListView" role="region" aria-label="Screenplay panels list">
+          <!-- Populated by cinema-engine.js -->
+        </div>
+
+        <!-- Dynamic Characters Grid -->
+        <div class="characters-grid" id="charactersView" style="display: none;" role="region" aria-label="Character continuity bible">
+          <!-- Populated by cinema-engine.js -->
+        </div>
+      </div>
+    </section>
+
+    <!-- 04 Written Archive / Editorial Hub -->
+    <section class="editorial-section" id="editorial" aria-labelledby="editorialTitle">
+      <div class="shell">
+        <div class="section-header">
+          <div class="section-header-left">
+            <p class="eyebrow">04 / The Written Archive</p>
+            <h2 class="h-section" id="editorialTitle">Field Notes &amp; Close Readings.</h2>
+          </div>
+          <p class="section-header-desc">
+            Essays on neuro-cinematics, sonic geography, and the philosophy of slow-burn storytelling. Click any note to open the distraction-free reading room.
+          </p>
+        </div>
+
+        <div class="editorial-grid">
+          <article class="essay-card" data-essay-id="field-note-001" role="button" tabindex="0">
+            <div>
+              <div class="essay-card-top">
+                <span class="essay-number">Field Note 001 // Format</span>
+                <span class="essay-read-time">4 Min Read</span>
+              </div>
+              <h3 class="essay-title">The Eight-Second Panel as a Unit of Attention</h3>
+              <p class="essay-excerpt">
+                Why AxisChronicle gives each visual composition a measured span instead of asking it to hurry. On cognitive processing, spatial mapping, and emotional resonance.
+              </p>
+            </div>
+            <div class="essay-card-bottom">
+              <span>Saurabh Sohan Singh · SQUARGRAPH™</span>
+              <div class="essay-open-icon" aria-hidden="true">↗</div>
+            </div>
+          </article>
+
+          <article class="essay-card" data-essay-id="field-note-002" role="button" tabindex="0">
+            <div>
+              <div class="essay-card-top">
+                <span class="essay-number">Field Note 002 // Montage</span>
+                <span class="essay-read-time">6 Min Read</span>
+              </div>
+              <h3 class="essay-title">Building a Film from Fragments</h3>
+              <p class="essay-excerpt">
+                Notes on continuity, recurrence, and what the human voice reveals between cuts. Constructing the 75 frames of BARIBARI as sovereign photographic statements.
+              </p>
+            </div>
+            <div class="essay-card-bottom">
+              <span>Saurabh Sohan Singh · SQUARGRAPH™</span>
+              <div class="essay-open-icon" aria-hidden="true">↗</div>
+            </div>
+          </article>
+
+          <article class="essay-card" data-essay-id="field-note-003" role="button" tabindex="0">
+            <div>
+              <div class="essay-card-top">
+                <span class="essay-number">Field Note 003 // Sound</span>
+                <span class="essay-read-time">5 Min Read</span>
+              </div>
+              <h3 class="essay-title">When Narration Becomes a Place</h3>
+              <p class="essay-excerpt">
+                A reflection on spatial sound design, silence, and the interior architecture of slow-burn suspense. How room-tone and voiceover establish atmospheric gravity.
+              </p>
+            </div>
+            <div class="essay-card-bottom">
+              <span>Saurabh Sohan Singh · SQUARGRAPH™</span>
+              <div class="essay-open-icon" aria-hidden="true">↗</div>
+            </div>
+          </article>
+
+          <article class="essay-card" data-essay-id="field-note-004" role="button" tabindex="0">
+            <div>
+              <div class="essay-card-top">
+                <span class="essay-number">Field Note 004 // Manifesto</span>
+                <span class="essay-read-time">5 Min Read</span>
+              </div>
+              <h3 class="essay-title">The Anti-Feed Manifesto</h3>
+              <p class="essay-excerpt">
+                Why curated slowness and austere craft outlast algorithmic dopamine loops. SQUARGRAPH's vision for an independent cinema platform built for enduring value.
+              </p>
+            </div>
+            <div class="essay-card-bottom">
+              <span>Editorial Board · SQUARGRAPH™</span>
+              <div class="essay-open-icon" aria-hidden="true">↗</div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- 05 Imprint & About Section -->
+    <section class="imprint-section" id="imprint" aria-labelledby="imprintTitle">
+      <div class="shell">
+        <div class="section-header">
+          <div class="section-header-left">
+            <p class="eyebrow">05 / The Imprint</p>
+            <h2 class="h-section" id="imprintTitle">About AxisChronicle.</h2>
+          </div>
+          <p class="section-header-desc">
+            An independent intellectual property and storytelling engine created by SQUARGRAPH™.
+          </p>
+        </div>
+
+        <div class="imprint-grid">
+          <div class="imprint-sidebar">
+            <div class="imprint-box">
+              <span class="eyebrow">Creative &amp; IP Origin</span>
+              <strong>SQUARGRAPH™ Studio</strong>
+              <p>
+                An integrated creative, brand strategy, and digital agency founded by filmmaker Saurabh Sohan Singh. New Delhi, India.
+              </p>
+            </div>
+
+            <div class="imprint-box">
+              <span class="eyebrow">Curatorial Rights</span>
+              <strong>Original Arthouse IP</strong>
+              <p>
+                All narrative screenplays, panel designs, character bibles, and editorial publications are protected intellectual property of SQUARGRAPH™.
+              </p>
+            </div>
+
+            <div class="imprint-box">
+              <span class="eyebrow">Festival &amp; Syndication</span>
+              <strong>Screening Requests</strong>
+              <p>
+                Film festivals, arthouse streaming partners, and gallery curators can request private screener access and production treatments.
+              </p>
+              <button class="btn-secondary" data-open-inquiry style="margin-top: 14px; font-size: 9.5px; padding: 0 16px; min-height: 40px;" type="button">
+                Open Curatorial Request
+              </button>
+            </div>
+          </div>
+
+          <div class="imprint-content">
+            <h2>A different kind<br>of screen time.</h2>
+            <p>
+              AxisChronicle was conceived to address a deepening creative deficit in contemporary media: the collapse of patient, slow-burn atmosphere beneath algorithmic velocity. While streaming giants prioritize volume over intent, AxisChronicle operates as a deliberate arthouse sanctuary—treating cinema as a series of sovereign, meditative compositions.
+            </p>
+            <p>
+              Our films are authored from the ground up: frame-by-frame, voice-by-voice. Every eight seconds is an intentional pact between director and viewer. As an independent IP nurtured within the SQUARGRAPH™ creative ecosystem, the platform represents the intersection of rigorous mathematical design, psychological storytelling, and pure cinematic immersion.
+            </p>
+
+            <div class="imprint-signature-block">
+              <div class="brand-symbol-wrap" style="width: 44px; height: 44px;">
+                <svg class="brand-symbol-svg" style="width: 24px; height: 24px;" viewBox="0 0 1000 1000" fill="none">
+                  <polygon fill="#FAFAF9" points="500,64.745 64.745,500 500,935.255 935.255,500 695,259.745 695,350.255 844.745,500 500,844.745 155.255,500 500,155.255"/>
+                </svg>
+              </div>
+              <div class="signature-meta">
+                <strong>Saurabh Sohan Singh</strong>
+                <span>Filmmaker, Brand Strategist &amp; Founder, SQUARGRAPH™</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Global Footer -->
+  <footer>
+    <div class="shell">
+      <div class="footer-top">
+        <div>
+          <div class="footer-brand-title">AXIS<span>CHRONICLE</span></div>
+          <p class="footer-desc">
+            A high-end digital media platform and arthouse storytelling engine. An independent, original intellectual property by SQUARGRAPH™.
+          </p>
+        </div>
+
+        <div>
+          <div class="footer-col-title">Platform</div>
+          <nav class="footer-nav">
+            <a href="#cinema">The Cinema Stage</a>
+            <a href="#format">8-Second Format</a>
+            <a href="#screenplay">Screenplay Archive</a>
+            <a href="#editorial">Field Notes</a>
+            <a href="#imprint">About the Imprint</a>
+          </nav>
+        </div>
+
+        <div>
+          <div class="footer-col-title">Originals</div>
+          <nav class="footer-nav">
+            <a href="#cinema">BARIBARI (Issue 001)</a>
+            <button data-open-inquiry style="text-align: left; background: none; border: none; padding: 0; color: inherit; cursor: pointer;">Screener Access</button>
+            <a href="#editorial">Anti-Feed Manifesto</a>
+          </nav>
+        </div>
+
+        <div>
+          <div class="footer-squargraph-card">
+            <strong>SQUARGRAPH™</strong>
+            <p>
+              Integrated creative, brand strategy, and digital agency. Strategy, creative standards, and coordination at the centre of the offer.
+            </p>
+            <a class="footer-squargraph-link" href="https://squargraph.com/" target="_blank" rel="noreferrer">
+              Visit Official Studio ↗
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <span>© 2026 AxisChronicle · All Rights Reserved · SQUARGRAPH™</span>
+        <span>Conceived, Written &amp; Directed by Saurabh Sohan Singh · New Delhi, India</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Editorial Drawer (Slide-Over Reading Room) -->
+  <div class="drawer-backdrop" id="drawerBackdrop" aria-hidden="true"></div>
+  <aside class="editorial-drawer" id="editorialDrawer" role="dialog" aria-modal="true" aria-labelledby="drawerTitle">
+    <div class="drawer-header">
+      <span class="eyebrow" id="drawerCategory">Field Note // SQUARGRAPH™</span>
+      <button class="drawer-close-btn" id="drawerCloseBtn" type="button" aria-label="Close reading room">×</button>
+    </div>
+    <div class="drawer-body">
+      <h2 class="drawer-article-title" id="drawerTitle"></h2>
+      <p class="drawer-article-subtitle" id="drawerSubtitle"></p>
+      <div class="drawer-article-meta" id="drawerMeta"></div>
+      <div class="drawer-article-content" id="drawerContent"></div>
+    </div>
+  </aside>
+
+  <!-- Curatorial Screening Inquiry Dialog -->
+  <dialog id="inquiryDialog" aria-labelledby="inquiryTitle">
+    <div class="dialog-inner">
+      <div class="dialog-topline">
+        <span class="eyebrow">AxisChronicle · Issue 001</span>
+        <button id="inquiryCloseBtn" type="button" aria-label="Close dialog" style="font-size: 18px; color: var(--muted); cursor: pointer;">×</button>
+      </div>
+      <h3 id="inquiryTitle">Curatorial &amp; Screener Inquiry</h3>
+      <p>
+        AxisChronicle provides private full-cut screeners, high-resolution panel contact sheets, and complete production treatments to accredited festival curators, film critics, and distribution partners.
+      </p>
+
+      <form id="inquiryForm">
+        <div class="form-group">
+          <label class="form-label" for="inqName">Full Name</label>
+          <input class="form-input" id="inqName" type="text" placeholder="e.g. Elena Rostova" required>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="inqOrg">Organization / Festival / Publication</label>
+          <input class="form-input" id="inqOrg" type="text" placeholder="e.g. International Film Festival Rotterdam" required>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="inqEmail">Official Professional Email</label>
+          <input class="form-input" id="inqEmail" type="email" placeholder="name@organization.org" required>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="inqRole">Purpose of Request</label>
+          <select class="form-select" id="inqRole" required>
+            <option value="" disabled selected>Select Purpose</option>
+            <option value="Festival Programming">Film Festival Programming</option>
+            <option value="Arthouse Syndication">Arthouse / Streaming Platform Acquisition</option>
+            <option value="Critical Review">Press &amp; Critical Review</option>
+            <option value="Gallery Exhibition">Museum / Gallery Spatial Exhibition</option>
+            <option value="Other Inquiry">Other Curatorial Inquiry</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="inqNotes">Notes / Accreditations</label>
+          <textarea class="form-textarea" id="inqNotes" placeholder="Provide screening timeline or context..."></textarea>
+        </div>
+
+        <button class="btn-primary" style="width: 100%; margin-top: 8px;" type="submit">
+          Submit Private Screener Request ↗
+        </button>
+      </form>
+    </div>
+  </dialog>
+
+  <!-- Cinema Engine & Platform Script -->
+  <script src="./assets/js/cinema-engine.js"></script>
+</body>
+</html>
