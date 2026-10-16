@@ -1,420 +1,1014 @@
-<!doctype html>
-<html lang="en" class="bg-black text-white">
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#000000">
-  <meta name="description" content="AxisChronicle — Arthouse Cinema Platform &amp; Storytelling Engine by SQUARGRAPH™. Episode 1: Baribari - The Loop &amp; The Armor.">
-  <link rel="icon" type="image/svg+xml" href="./assets/logo/axischronicle-favicon.svg">
-  <title>AXISCHRONICLE // BARIBARI — THE LOOP &amp; THE ARMOR</title>
-  
-  <!-- Tailwind CSS via CDN -->
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            black: '#000000',
-            white: '#FFFFFF',
-            slateborder: '#222222',
-            slatemuted: '#888888',
-            slatedark: '#111111'
-          },
-          fontFamily: {
-            sans: ['Satoshi', 'Inter', '-apple-system', 'sans-serif'],
-            serif: ['Georgia', 'Cambria', 'serif'],
-            mono: ['JetBrains Mono', 'Menlo', 'monospace']
-          }
-        }
-      }
-    }
-  </script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#FAFAF9" />
+  <title>AxisChronicle | Arthouse Storytelling Engine | SQUARGRAPH™</title>
+  <meta name="description" content="AxisChronicle is an independent arthouse storytelling engine and cinema platform created by SQUARGRAPH™. Episode 1: BARIBARI — Written and directed by Saurabh Sohan Singh." />
+  <link rel="icon" type="image/png" href="./assets/logo/favicon-g-v2.png" />
+  <link rel="apple-touch-icon" href="./assets/logo/favicon-g-v2.png" />
 
   <style>
     @font-face {
-      font-family: "Satoshi";
-      src: url("./assets/fonts/Satoshi-Regular.woff") format("woff");
+      font-family: 'Satoshi';
+      src: url('./assets/fonts/Satoshi-Regular.woff') format('woff');
       font-weight: 400;
+      font-style: normal;
       font-display: swap;
     }
     @font-face {
-      font-family: "Satoshi";
-      src: url("./assets/fonts/Satoshi-Medium.woff") format("woff");
+      font-family: 'Satoshi';
+      src: url('./assets/fonts/Satoshi-Medium.woff') format('woff');
       font-weight: 500;
+      font-style: normal;
       font-display: swap;
     }
     @font-face {
-      font-family: "Satoshi";
-      src: url("./assets/fonts/Satoshi-Bold.woff") format("woff");
+      font-family: 'Satoshi';
+      src: url('./assets/fonts/Satoshi-Bold.woff') format('woff');
       font-weight: 700;
+      font-style: normal;
       font-display: swap;
     }
 
-    /* Absolute geometric restriction: Hard 90-degree square corners everywhere */
-    * {
-      border-radius: 0 !important;
-      box-sizing: border-box;
+    :root {
+      --bg: #FFFFFF;
+      --offwhite: #FAFAF9;
+      --warmgray: #F5F5F3;
+      --coolgray: #F0EFED;
+      --bordergray: #E5E3DF;
+      --textprimary: #1A1714;
+      --textsecondary: #3D3935;
+      --textmuted: #6B6762;
+      --accent: #394536;
+      --accentmuted: #657158;
+      --accentlight: #EDF0EA;
+      --surface: #F5F5F3;
+      --font: 'Satoshi', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      --radius-pill: 999px;
+      --radius-card: 16px;
+      --shadow-sm: 0 1px 3px rgba(26,23,20,.06), 0 1px 2px rgba(26,23,20,.04);
+      --shadow-md: 0 4px 16px rgba(26,23,20,.08), 0 2px 6px rgba(26,23,20,.05);
+      --shadow-lg: 0 12px 40px rgba(26,23,20,.1), 0 4px 12px rgba(26,23,20,.06);
+      --transition: 0.22s cubic-bezier(.4,0,.2,1);
     }
 
-    body {
-      background-color: #000000;
-      color: #FFFFFF;
-      font-family: "Satoshi", sans-serif;
+    *, *::before, *::after {
+      box-sizing: border-box;
       margin: 0;
       padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      background-color: var(--offwhite);
+      color: var(--textprimary);
+      font-family: var(--font);
       -webkit-font-smoothing: antialiased;
     }
 
-    ::selection {
-      background: #FFFFFF;
-      color: #000000;
+    body {
+      background-color: var(--offwhite);
+      color: var(--textprimary);
+      font-family: var(--font);
+      font-size: 15px;
+      line-height: 1.6;
+      overflow-x: hidden;
     }
 
-    /* Custom thin scrollbar */
-    ::-webkit-scrollbar {
-      width: 4px;
+    a {
+      color: inherit;
+      text-decoration: none;
+      transition: color var(--transition);
     }
-    ::-webkit-scrollbar-track {
-      background: #000000;
+
+    button {
+      font: inherit;
+      background: none;
+      border: none;
+      cursor: pointer;
     }
-    ::-webkit-scrollbar-thumb {
-      background: #222222;
+
+    ::selection {
+      background: rgba(57, 69, 54, 0.18);
+      color: var(--textprimary);
+    }
+
+    .shell {
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 0 clamp(20px, 4vw, 64px);
+    }
+
+    /* ── Header & Navigation (Matching squargraph.com) ── */
+    nav.site-nav {
+      position: sticky;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 100;
+      background: rgba(250, 250, 249, 0.94);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border-bottom: 1px solid var(--bordergray);
+    }
+
+    .nav-inner {
+      height: 80px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 32px;
+    }
+
+    .nav-brand {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      line-height: 1;
+    }
+
+    .brand-logo-img {
+      height: 24px;
+      width: auto;
+      display: block;
+    }
+
+    .nav-brand-divider {
+      color: #C0BEBA;
+      font-weight: 300;
+      font-size: 15px;
+    }
+
+    .nav-subbrand {
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--accent);
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 36px;
+    }
+
+    .nav-links a {
+      font-size: 13px;
+      font-weight: 500;
+      color: var(--textsecondary);
+      letter-spacing: -0.01em;
+      transition: color var(--transition);
+    }
+
+    .nav-links a:hover {
+      color: var(--textprimary);
+    }
+
+    .nav-cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 13px;
+      font-weight: 500;
+      color: var(--textprimary);
+      border: 1px solid var(--bordergray);
+      border-radius: var(--radius-pill);
+      padding: 10px 22px;
+      background: #FFFFFF;
+      transition: all var(--transition);
+    }
+
+    .nav-cta:hover {
+      background: var(--accent);
+      color: #FFFFFF;
+      border-color: var(--accent);
+    }
+
+    /* ── Eyebrow Tag ── */
+    .section-eyebrow {
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--accent);
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 14px;
+    }
+
+    .eyebrow-dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--accent);
+      display: inline-block;
+    }
+
+    /* ── Hero / Cinema Header ── */
+    .theater-hero {
+      padding: clamp(48px, 6vw, 80px) 0 36px;
+    }
+
+    .theater-hero h1 {
+      font-size: clamp(38px, 5.5vw, 68px);
+      font-weight: 700;
+      letter-spacing: -0.04em;
+      line-height: 1.05;
+      color: var(--textprimary);
+      margin-bottom: 18px;
+    }
+
+    .theater-hero h1 em {
+      font-style: italic;
+      color: var(--accent);
+    }
+
+    .theater-hero p.hero-desc {
+      font-size: clamp(16px, 1.35vw, 19px);
+      color: var(--textsecondary);
+      max-width: 680px;
+      line-height: 1.7;
+    }
+
+    /* ── The Centerpiece Theatre Screen (Card Style) ── */
+    .cinema-card {
+      background: #FFFFFF;
+      border: 1px solid var(--bordergray);
+      border-radius: var(--radius-card);
+      box-shadow: var(--shadow-lg);
+      overflow: hidden;
+      margin-top: 32px;
+    }
+
+    .cinema-card-topbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 14px 24px;
+      border-bottom: 1px solid var(--bordergray);
+      background: var(--warmgray);
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--textsecondary);
+    }
+
+    .cinema-card-topbar .film-badge {
+      color: var(--accent);
+    }
+
+    .cinema-stage-wrap {
+      position: relative;
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      background: #0A0C0A;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+    }
+
+    .cinema-canvas {
+      width: 100%;
+      height: 100%;
+      display: block;
+    }
+
+    .cinema-vignette {
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      background: radial-gradient(ellipse at center, rgba(0,0,0,0) 0%, rgba(0,0,0,0.7) 100%);
+    }
+
+    .stage-center-btn {
+      position: absolute;
+      z-index: 10;
+      background: rgba(255, 255, 255, 0.92);
+      backdrop-filter: blur(8px);
+      color: var(--textprimary);
+      border-radius: var(--radius-pill);
+      padding: 14px 28px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      box-shadow: 0 4px 24px rgba(0,0,0,0.3);
+      transition: all var(--transition);
+    }
+
+    .stage-center-btn:hover {
+      background: #FFFFFF;
+      transform: scale(1.04);
+    }
+
+    .stage-hud-overlay {
+      position: absolute;
+      bottom: 20px;
+      left: 20px;
+      right: 20px;
+      z-index: 10;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      pointer-events: none;
+    }
+
+    .stage-hud-box {
+      background: rgba(10, 12, 10, 0.85);
+      backdrop-filter: blur(8px);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      border-radius: 8px;
+      padding: 10px 16px;
+      max-width: 600px;
+    }
+
+    .stage-hud-scene {
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: #D8E9A1;
+      margin-bottom: 2px;
+    }
+
+    .stage-hud-text {
+      font-size: 13px;
+      color: #FFFFFF;
+      line-height: 1.4;
+    }
+
+    /* ── Cinema Deck (Play/Pause & Scrubber) ── */
+    .cinema-deck {
+      background: #FFFFFF;
+      padding: 18px 24px 22px;
+      border-top: 1px solid var(--bordergray);
+    }
+
+    .scrubber-bar-wrap {
+      width: 100%;
+      height: 6px;
+      background: var(--warmgray);
+      border-radius: 3px;
+      position: relative;
+      cursor: pointer;
+      margin-bottom: 16px;
+      transition: height 0.15s;
+    }
+
+    .scrubber-bar-wrap:hover {
+      height: 8px;
+    }
+
+    .scrubber-progress {
+      height: 100%;
+      background: var(--accent);
+      border-radius: 3px;
+      width: 0%;
+      transition: width 0.1s linear;
+    }
+
+    .deck-controls-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+
+    .deck-left-group {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .play-btn-circle {
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      background: var(--textprimary);
+      color: #FFFFFF;
+      display: grid;
+      place-items: center;
+      transition: all var(--transition);
+    }
+
+    .play-btn-circle:hover {
+      background: var(--accent);
+      transform: scale(1.05);
+    }
+
+    .deck-time {
+      font-size: 13px;
+      font-weight: 500;
+      color: var(--textsecondary);
+    }
+
+    .deck-time strong {
+      color: var(--textprimary);
+    }
+
+    .deck-right-group {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .deck-pill-btn {
+      font-size: 12px;
+      font-weight: 500;
+      color: var(--textsecondary);
+      border: 1px solid var(--bordergray);
+      border-radius: var(--radius-pill);
+      padding: 7px 16px;
+      background: #FFFFFF;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      transition: all var(--transition);
+    }
+
+    .deck-pill-btn:hover, .deck-pill-btn.is-active {
+      border-color: var(--accent);
+      color: var(--textprimary);
+      background: var(--accentlight);
+    }
+
+    /* ── The Narrative Synopsis Section (SQUARGRAPH Two-Column Layout) ── */
+    .synopsis-section {
+      padding: clamp(64px, 8vw, 110px) 0;
+      border-bottom: 1px solid var(--bordergray);
+    }
+
+    .synopsis-grid {
+      display: grid;
+      grid-template-columns: minmax(280px, 1fr) minmax(320px, 2fr);
+      gap: clamp(36px, 6vw, 96px);
+      align-items: start;
+    }
+
+    /* Left Column */
+    .synopsis-left {
+      position: sticky;
+      top: 100px;
+    }
+
+    .film-title-display {
+      font-size: clamp(40px, 4.5vw, 56px);
+      font-weight: 700;
+      letter-spacing: -0.04em;
+      line-height: 1.05;
+      color: var(--textprimary);
+      margin-bottom: 8px;
+    }
+
+    .film-episode-label {
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: 0.04em;
+      color: var(--accentmuted);
+      margin-bottom: 24px;
+    }
+
+    .metadata-card {
+      background: #FFFFFF;
+      border: 1px solid var(--bordergray);
+      border-radius: 12px;
+      padding: 20px;
+      margin-bottom: 24px;
+    }
+
+    .meta-row {
+      display: flex;
+      flex-direction: column;
+      gap: 3px;
+      padding: 10px 0;
+      border-bottom: 1px solid var(--bordergray);
+    }
+
+    .meta-row:last-child {
+      border-bottom: none;
+      padding-bottom: 0;
+    }
+
+    .meta-row:first-child {
+      padding-top: 0;
+    }
+
+    .meta-label {
+      font-size: 10px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--textmuted);
+    }
+
+    .meta-value {
+      font-size: 14px;
+      font-weight: 500;
+      color: var(--textprimary);
+    }
+
+    /* Right Column (Editorial Script) */
+    .synopsis-right {
+      background: #FFFFFF;
+      border: 1px solid var(--bordergray);
+      border-radius: var(--radius-card);
+      padding: clamp(28px, 4vw, 56px);
+      box-shadow: var(--shadow-sm);
+    }
+
+    .synopsis-right .lead-para {
+      font-size: 19px;
+      line-height: 1.7;
+      color: var(--textprimary);
+      font-weight: 500;
+      margin-bottom: 28px;
+    }
+
+    .script-act-divider {
+      margin: 36px 0 16px;
+      padding-top: 24px;
+      border-top: 1px solid var(--bordergray);
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--accent);
+    }
+
+    .editorial-prose p {
+      font-size: 16px;
+      line-height: 1.85;
+      color: var(--textsecondary);
+      margin-bottom: 20px;
+    }
+
+    .editorial-quote {
+      margin: 24px 0;
+      padding: 16px 22px;
+      background: var(--warmgray);
+      border-left: 3px solid var(--accent);
+      border-radius: 4px;
+      font-size: 15px;
+      font-weight: 500;
+      color: var(--textprimary);
+      line-height: 1.6;
+    }
+
+    /* ── SQUARGRAPH Official Footer ── */
+    footer.site-footer {
+      background: var(--offwhite);
+      border-top: 1px solid var(--bordergray);
+      padding: clamp(56px, 7vw, 90px) 0 36px;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: minmax(240px, 1.5fr) repeat(4, 1fr);
+      gap: clamp(24px, 3.5vw, 48px);
+      margin-bottom: 48px;
+    }
+
+    .footer-brand-title {
+      font-size: 20px;
+      font-weight: 700;
+      letter-spacing: -0.03em;
+      color: var(--textprimary);
+      margin-bottom: 12px;
+    }
+
+    .footer-tagline {
+      font-size: 14px;
+      color: var(--textsecondary);
+      line-height: 1.6;
+      margin-bottom: 16px;
+      max-width: 28ch;
+    }
+
+    .footer-col-label {
+      font-size: 11px;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 18px;
+      display: block;
+      font-weight: 600;
+    }
+
+    .footer-links-list {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .footer-links-list a {
+      font-size: 13px;
+      color: var(--textsecondary);
+      transition: color var(--transition);
+    }
+
+    .footer-links-list a:hover {
+      color: var(--textprimary);
+    }
+
+    .footer-bottom-bar {
+      border-top: 1px solid var(--bordergray);
+      padding-top: 28px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 14px;
+      font-size: 12px;
+      color: var(--textmuted);
+    }
+
+    /* ── Responsive Queries ── */
+    @media (max-width: 992px) {
+      .synopsis-grid {
+        grid-template-columns: 1fr;
+        gap: 36px;
+      }
+      .synopsis-left {
+        position: static;
+      }
+      .footer-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .nav-links {
+        display: none;
+      }
+      .footer-grid {
+        grid-template-columns: 1fr;
+      }
+      .footer-bottom-bar {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      .cinema-card-topbar {
+        padding: 12px 16px;
+      }
+      .cinema-deck {
+        padding: 14px 16px;
+      }
     }
   </style>
 </head>
-<body class="bg-black text-white min-h-screen flex flex-col selection:bg-white selection:text-black">
+<body>
 
-  <!-- =========================================================================
-       BLOCK 1: THE SYSTEM HEADER
-       Thin, top-aligned 1px bordered navigation utility bar
-       ========================================================================= -->
-  <header class="w-full border-b border-[#222222] bg-black sticky top-0 z-50">
-    <div class="max-w-[1400px] mx-auto px-4 md:px-8 h-12 flex items-center justify-between text-xs font-mono uppercase tracking-widest">
-      <div class="flex items-center gap-2">
-        <span class="text-white font-bold">SQ.</span>
-        <span class="text-[#555555]">/</span>
-        <span class="text-white">AXISCHRONICLE</span>
-      </div>
-      <div>
-        <a href="https://squargraph.com" target="_blank" rel="noopener noreferrer" class="text-[#888888] hover:text-white transition-colors duration-150 flex items-center gap-1">
-          squargraph.com <span class="text-xs">↗</span>
+  <!-- Top Navigation (Matching squargraph.com) -->
+  <nav class="site-nav" aria-label="Main navigation">
+    <div class="shell nav-inner">
+      <a href="/" class="nav-brand" aria-label="SQUARGRAPH™ homepage">
+        <img src="./assets/logo/logo-g-v2.webp" alt="SQUARGRAPH™" class="brand-logo-img" />
+        <span class="nav-brand-divider">/</span>
+        <span class="nav-subbrand">AXISCHRONICLE</span>
+      </a>
+
+      <div class="nav-links">
+        <a href="#cinema">The Cinema</a>
+        <a href="#synopsis">Story &amp; Script</a>
+        <a href="https://squargraph.com/studio/" target="_blank" rel="noopener noreferrer">About Studio</a>
+        <a href="https://squargraph.com" target="_blank" rel="noopener noreferrer" class="nav-cta">
+          squargraph.com <span aria-hidden="true">↗</span>
         </a>
       </div>
     </div>
-  </header>
+  </nav>
 
-  <!-- Main Content Wrap -->
-  <main class="flex-1 w-full max-w-[1400px] mx-auto px-4 md:px-8 pt-6 md:pt-10">
+  <main id="mainContent">
+    <div class="shell">
 
-    <!-- =========================================================================
-         BLOCK 2: THE THEATRE SCREEN (The Centerpiece)
-         Dominant 16:9 widescreen video player container + docked control deck
-         ========================================================================= -->
-    <section class="w-full" aria-label="Cinema Theater Screen">
-      <!-- 16:9 Screen Container -->
-      <div id="theatreStage" class="w-full aspect-video bg-[#050505] border border-[#222222] relative overflow-hidden flex items-center justify-center group cursor-pointer">
-        <!-- Interactive Canvas / Video Stream Simulator -->
-        <canvas id="cinemaCanvas" class="w-full h-full block"></canvas>
+      <!-- Hero Header -->
+      <section class="theater-hero" aria-labelledby="heroTitle">
+        <p class="section-eyebrow">
+          <span class="eyebrow-dot" aria-hidden="true"></span>
+          Arthouse Storytelling Engine <span aria-hidden="true">/</span> Original Intellectual Property
+        </p>
+        <h1 id="heroTitle">
+          Stories stay<br><em>in the dark.</em>
+        </h1>
+        <p class="hero-desc">
+          AxisChronicle is an independent cinema platform and slow-burn narrative engine created by SQUARGRAPH™. Long-form psychological thrillers and surreal narratives built frame-by-frame and paired with deep, immersive voiceover narration.
+        </p>
+      </section>
 
-        <!-- Subtle 35mm Vignette Overlay -->
-        <div class="absolute inset-0 pointer-events-none bg-[radial-gradient(ellipse_at_center,rgba(0,0,0,0)_0%,rgba(0,0,0,0.85)_100%)]"></div>
-
-        <!-- Top Screen Telemetry Stamp -->
-        <div class="absolute top-4 left-4 md:top-6 md:left-6 flex items-center gap-3 pointer-events-none z-10">
-          <span class="font-mono text-[10px] md:text-xs uppercase tracking-widest bg-black/80 border border-[#222222] px-2.5 py-1 text-white">
-            EPISODE 1: BARIBARI
-          </span>
-          <span class="font-mono text-[10px] md:text-xs uppercase tracking-widest text-[#888888] bg-black/80 border border-[#222222] px-2.5 py-1">
-            THE LOOP &amp; THE ARMOR
-          </span>
-        </div>
-
-        <div class="absolute top-4 right-4 md:top-6 md:right-6 font-mono text-[10px] md:text-xs uppercase tracking-widest text-[#888888] bg-black/80 border border-[#222222] px-2.5 py-1 z-10">
-          <span id="panelTelemetry">PANEL 001 // 255</span>
-        </div>
-
-        <!-- Center Play Trigger (Appears when paused) -->
-        <div id="centerPlayPrompt" class="absolute inset-0 flex items-center justify-center pointer-events-none z-10 transition-opacity duration-200">
-          <div class="border border-white/40 bg-black/75 px-6 py-4 flex items-center gap-3 pointer-events-auto cursor-pointer hover:border-white transition-colors">
-            <svg class="w-4 h-4 fill-white" viewBox="0 0 24 24"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
-            <span class="font-mono text-xs uppercase tracking-widest text-white">PLAY THEATER STREAM</span>
-          </div>
-        </div>
-
-        <!-- Live Scene Status HUD at bottom of screen -->
-        <div class="absolute bottom-4 left-4 right-4 md:bottom-6 md:left-6 md:right-6 pointer-events-none z-10 flex justify-between items-end">
-          <div class="bg-black/90 border border-[#222222] px-3.5 py-2 max-w-xl">
-            <div id="sceneSlug" class="font-mono text-[10px] uppercase tracking-wider text-[#888888] mb-0.5">EXT. QUIET RESIDENTIAL LANE — DUSK</div>
-            <div id="sceneDirection" class="text-xs md:text-sm text-white font-normal line-clamp-2">A low tracking shot follows the front wheel of Saurabh’s bicycle rolling along the dusty lane.</div>
-          </div>
-          <div class="hidden sm:block font-mono text-[10px] uppercase tracking-widest text-[#888888] bg-black/90 border border-[#222222] px-3 py-2">
-            8s PANEL CYCLE · 24 FPS
-          </div>
-        </div>
-      </div>
-
-      <!-- Docked Interface Bar (Structural Timeline Deck) -->
-      <div class="w-full border-x border-b border-[#222222] bg-[#0A0A0A] p-3 md:p-4">
-        <!-- Scrubber Bar -->
-        <div id="timelineScrubber" class="w-full h-1 bg-[#222222] relative cursor-pointer mb-3 hover:h-2 transition-all" role="slider" aria-label="Playback Scrubber">
-          <div id="timelineProgress" class="h-full bg-white w-0 transition-all duration-100"></div>
-        </div>
-
-        <!-- Control Deck Items -->
-        <div class="flex items-center justify-between text-xs font-mono">
-          <!-- Left: Play/Pause & Time -->
-          <div class="flex items-center gap-4">
-            <button id="btnPlayPause" type="button" class="w-8 h-8 border border-[#222222] bg-black hover:border-white transition-colors flex items-center justify-center text-white" aria-label="Play/Pause">
-              <svg id="playIconSvg" class="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
-              <svg id="pauseIconSvg" class="w-3.5 h-3.5 fill-current hidden" viewBox="0 0 24 24"><rect x="6" y="4" width="4" height="16"></rect><rect x="14" y="4" width="4" height="16"></rect></svg>
-            </button>
-
-            <button id="btnPrevPanel" type="button" class="w-8 h-8 border border-[#222222] bg-black hover:border-white transition-colors flex items-center justify-center text-white" title="Previous 8s Frame">
-              <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polygon points="19 20 9 12 19 4 19 20"></polygon><line x1="5" y1="19" x2="5" y2="5"></line></svg>
-            </button>
-
-            <button id="btnNextPanel" type="button" class="w-8 h-8 border border-[#222222] bg-black hover:border-white transition-colors flex items-center justify-center text-white" title="Next 8s Frame">
-              <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polygon points="5 4 15 12 5 20 5 4"></polygon><line x1="19" y1="5" x2="19" y2="19"></line></svg>
-            </button>
-
-            <div class="text-[#888888] tracking-widest text-[11px]">
-              <span id="timeCurrent" class="text-white">00:00</span> / <span>34:00</span>
+      <!-- The Centerpiece Cinema Theatre Screen -->
+      <section id="cinema" aria-label="Episode 1 Cinema Player">
+        <div class="cinema-card">
+          <!-- Topbar -->
+          <div class="cinema-card-topbar">
+            <div>
+              <span>Episode 1: </span>
+              <strong class="film-badge">BARIBARI — The Loop &amp; The Armor</strong>
+            </div>
+            <div>
+              <span>Runtime: 34:00 · 16:9 Cinema</span>
             </div>
           </div>
 
-          <!-- Right: Audio Room-Tone & Fullscreen -->
-          <div class="flex items-center gap-3">
-            <button id="btnAudioToggle" type="button" class="border border-[#222222] bg-black px-3 py-1.5 text-[10px] uppercase tracking-widest text-[#888888] hover:text-white hover:border-white transition-colors flex items-center gap-1.5">
-              <span id="audioIndicator" class="inline-block w-1.5 h-1.5 bg-[#444444]"></span>
-              <span id="audioLabel">AUDIO: MUTED</span>
+          <!-- Video Stage / Visual Stream Simulator -->
+          <div class="cinema-stage-wrap" id="theaterStage" role="region" aria-label="Video Player Stage">
+            <canvas id="cinemaCanvas" class="cinema-canvas" aria-label="BARIBARI Scene Canvas"></canvas>
+            <div class="cinema-vignette" aria-hidden="true"></div>
+
+            <!-- Big Center Play Button Overlay -->
+            <button id="stagePlayBtn" class="stage-center-btn" type="button" aria-label="Play Cinema Stream">
+              <svg width="14" height="16" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+              <span>Play Film Stream</span>
             </button>
 
-            <button id="btnFullscreen" type="button" class="border border-[#222222] bg-black px-3 py-1.5 text-[10px] uppercase tracking-widest text-[#888888] hover:text-white hover:border-white transition-colors">
-              FULLSCREEN [F]
-            </button>
+            <!-- Bottom HUD Display -->
+            <div class="stage-hud-overlay">
+              <div class="stage-hud-box">
+                <div id="hudScene" class="stage-hud-scene">EXT. QUIET RESIDENTIAL LANE — DUSK</div>
+                <div id="hudDirection" class="stage-hud-text">
+                  A low tracking shot follows the front wheel of Saurabh’s bicycle rolling along the dusty lane.
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Docked Controls Deck -->
+          <div class="cinema-deck">
+            <div id="scrubberBar" class="scrubber-bar-wrap" role="slider" aria-label="Playback timeline" aria-valuemin="0" aria-valuemax="2040" aria-valuenow="0">
+              <div id="scrubberProgress" class="scrubber-progress"></div>
+            </div>
+
+            <div class="deck-controls-row">
+              <div class="deck-left-group">
+                <button id="btnPlayDeck" class="play-btn-circle" type="button" aria-label="Play/Pause">
+                  <svg id="deckPlayIcon" width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+                  <svg id="deckPauseIcon" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="display: none;"><rect x="6" y="4" width="4" height="16"></rect><rect x="14" y="4" width="4" height="16"></rect></svg>
+                </button>
+
+                <div class="deck-time">
+                  <strong id="timeCurrent">00:00</strong> / <span>34:00</span>
+                </div>
+              </div>
+
+              <div class="deck-right-group">
+                <button id="btnAmbientAudio" class="deck-pill-btn" type="button">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon><path d="M15.54 8.46a5 5 0 0 1 0 7.07"></path></svg>
+                  <span id="audioLabel">Room-Tone: Active</span>
+                </button>
+                <button id="btnFullscreen" class="deck-pill-btn" type="button">
+                  <span>Fullscreen ⛶</span>
+                </button>
+              </div>
+            </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- =========================================================================
-         BLOCK 3: THE NARRATIVE SYNOPSIS (The Core Context)
-         Two-column split: Left = Title & Metadata | Right = Editorial Script Block
-         ========================================================================= -->
-    <section class="w-full pt-12 md:pt-16 pb-24 border-t border-[#222222] mt-12 md:mt-16" aria-labelledby="synopsisTitle">
-      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16">
-        
-        <!-- LEFT COLUMN: Title & Structured Metadata -->
-        <div class="lg:col-span-4 flex flex-col justify-start">
-          <div class="sticky top-20">
-            <h1 id="synopsisTitle" class="font-serif text-5xl md:text-6xl font-bold tracking-tight text-white uppercase leading-none">
-              BARIBARI
-            </h1>
-            <p class="font-mono text-xs uppercase tracking-widest text-[#888888] mt-3 mb-6">
-              Episode 1: The Loop &amp; The Armor
+      <!-- The Narrative Synopsis (Two-Column SQUARGRAPH Architecture) -->
+      <section id="synopsis" class="synopsis-section" aria-labelledby="synopsisHeading">
+        <div class="synopsis-grid">
+          
+          <!-- Left Column: Title & Metadata -->
+          <div class="synopsis-left">
+            <h2 id="synopsisHeading" class="film-title-display">BARIBARI</h2>
+            <p class="film-episode-label">Episode 1: The Loop &amp; The Armor</p>
+
+            <div class="metadata-card">
+              <div class="meta-row">
+                <span class="meta-label">Duration</span>
+                <span class="meta-value">34 Minutes (Feature Short)</span>
+              </div>
+              <div class="meta-row">
+                <span class="meta-label">Format</span>
+                <span class="meta-value">16:9 Widescreen Cinema</span>
+              </div>
+              <div class="meta-row">
+                <span class="meta-label">Audio</span>
+                <span class="meta-value">Immersive Voiceover Narration</span>
+              </div>
+              <div class="meta-row">
+                <span class="meta-label">Written &amp; Directed by</span>
+                <span class="meta-value">Saurabh Sohan Singh</span>
+              </div>
+              <div class="meta-row">
+                <span class="meta-label">Production House</span>
+                <span class="meta-value">SQUARGRAPH™ Original IP</span>
+              </div>
+            </div>
+
+            <div style="margin-top: 18px;">
+              <a href="https://squargraph.com/project-direction/" target="_blank" rel="noopener noreferrer" class="nav-cta" style="display: block; text-align: center;">
+                Inquire With Studio ↗
+              </a>
+            </div>
+          </div>
+
+          <!-- Right Column: Editorial Dream Narrative Script -->
+          <div class="synopsis-right editorial-prose">
+            <p class="lead-para">
+              A quiet residential lane at dusk. Amber evening light angles through overhead wires and dusty roadside trees. Saurabh pedals a bicycle alone in casual clothes toward an evening gathering, his rhythm steady and unhurried.
             </p>
 
-            <!-- Metadata String Block -->
-            <div class="border-t border-[#222222] pt-5 space-y-3 font-mono text-xs text-[#888888] uppercase tracking-wider">
-              <div>
-                <span class="text-white block text-[11px] mb-1">SPECIFICATION</span>
-                <p class="text-[#CCCCCC] font-sans normal-case text-sm">Duration: 34:00 | Aspect Ratio: 16:9 | Audio: Voice Narration</p>
-              </div>
+            <div class="script-act-divider">I. The Lane &amp; The Window</div>
+            <p>
+              To his right, an imposing residence rises behind an old stone boundary wall topped with an iron railing. At an open second-story window, three South Asian women appear in traditional red and black clothing—each possessing an unmistakable, distinct face. One woman raises a hand in a quiet, deliberate beckoning motion toward the entrance; the other two watch him in silence.
+            </p>
+            <p>
+              A sudden wave of déjà vu takes hold: he feels with certainty that he has encountered these women before, and that he has accidentally worn the wrong clothes. He brakes, turns his bicycle around, and rides back home.
+            </p>
 
-              <div class="border-t border-[#222222] pt-3">
-                <span class="text-white block text-[11px] mb-1">CREATOR</span>
-                <p class="text-[#CCCCCC] font-sans normal-case text-sm">Written and directed by Saurabh Sohan Singh</p>
-              </div>
+            <div class="script-act-divider">II. The Black Armor</div>
+            <p>
+              Inside his home, he leaves his bicycle in the hallway and walks directly to his bedroom. He lays out black trousers, a plain black crewneck T-shirt, a structured black utility jacket, and heavy black leather boots.
+            </p>
+            <p>
+              He strips off his casual attire and dresses methodically into the black ensemble. Checking his reflection in the mirror, his face remains the same, but his presence is hardened into uniform black. Fastened into this armor, he wheels his bicycle back out onto the street.
+            </p>
 
-              <div class="border-t border-[#222222] pt-3">
-                <span class="text-white block text-[11px] mb-1">ARCHITECTURE</span>
-                <p class="text-[#CCCCCC] font-sans normal-case text-sm">255 Continuous 8-Second Cinematic Panels</p>
-              </div>
+            <div class="script-act-divider">III. The Shortcut &amp; The Loop</div>
+            <p>
+              Saurabh rides back along the same road, passing beneath the stone wall and the high window. Further down the lane, he notices an open, unremarkable entrance in a concrete house beside the road. Assuming it will cut through to the parallel street, he parks his bicycle near the doorway and steps inside on foot.
+            </p>
+            <p>
+              The threshold immediately collapses into a spatial impossibility. Symmetrical, unpainted concrete hallways stretch into dim shadow. He turns through what should be an exterior exit, only to enter another identical corridor. He searches left and right; a metal door remains locked; corridors bend back onto themselves. Reaching a junction, he identifies a recognizable crack in the wall—he has looped in a circle. The building is an architectural maze with no exterior exit.
+            </p>
 
-              <div class="border-t border-[#222222] pt-3">
-                <span class="text-white block text-[11px] mb-1">INTELLECTUAL PROPERTY</span>
-                <p class="text-[#CCCCCC] font-sans normal-case text-sm">An Original Arthouse Imprint by SQUARGRAPH™</p>
-              </div>
+            <div class="script-act-divider">IV. The Shutter &amp; Baribari</div>
+            <p>
+              Tired, breathing heavily against the concrete wall, he notices a warm glow seeping from beneath a small partition. He approaches and knocks firmly on the corrugated metal shutter.
+            </p>
+            <p>
+              The shutter rises. Standing behind the counter is Baribari—a composed young woman with expressive dark eyes, her hair neatly bound, wearing a deep maroon traditional salwar-kameez embroidered with subtle threadwork. She studies him cautiously:
+            </p>
+
+            <div class="editorial-quote">
+              "Who are you? How did you get in here?"<br>
+              "I took a shortcut through the house," Saurabh answers. "And I’m lost."
             </div>
+
+            <p>
+              She unlocks the secondary shutter and releases him into the exit hall. Over the counter, an instant rapport forms. He asks her name; she replies: "Baribari." When he asks for her surname so he can locate her later, she tells him. He invites her to join him at the party down the road. Baribari smiles, drapes a light shawl over her shoulders, and steps out into the night beside him.
+            </p>
+
+            <div class="script-act-divider">V. The Gathering &amp; The Night Walk</div>
+            <p>
+              They arrive together at a warm, modest home party. Saurabh introduces Baribari to his friends simply by her first name. Seeing them together, friends assume without question that they are a couple and remark that they look right together. Neither Saurabh nor Baribari corrects them; they sit beside a window, sharing an unhurried, comfortable intimacy.
+            </p>
+            <p>
+              When the gathering winds down, they leave together. Saurabh walks Baribari home through the deserted, nocturnal streets.
+            </p>
+
+            <div class="script-act-divider">VI. The Narrow Gate</div>
+            <p>
+              Without sound or warning, Baribari’s body goes slack. She slips into sudden unconsciousness and begins to fall. Saurabh lunges and catches her before she hits the ground. He calls her name urgently, but receives no response. He lifts her onto his back, carrying her through the darkened road until they arrive at her home: an abrasive stone boundary wall interrupted by an exceedingly narrow iron gate.
+            </p>
+            <p>
+              With Baribari unconscious across his shoulders, Saurabh reaches up to grip the jagged masonry of the wall, carefully shifting his footing sideways through the restricted gap, shielding her waist from the rough stone. As her weight slips backward, he pivots and catches her securely in his arms, carrying her inside to her alarmed, grateful family. Standing back, watching her rest, an overwhelming certainty fills him: he never wants to lose her; he wants to share his life with her.
+            </p>
+
+            <div class="script-act-divider">VII. The Morning Flare &amp; The Vanishing Name</div>
+            <p>
+              A blinding, silent white flare blooms across the screen, obliterating the night.
+            </p>
+            <p>
+              The flare cools into sterile morning light across the ceiling of Saurabh’s actual bedroom. Saurabh wakes with a sharp intake of breath, his hands clenched into the bedsheets. The entire sequence—the three women at the window, the black armor, the repeating corridors, the party, the narrow gate—was an unbroken dream.
+            </p>
+            <p>
+              He sits up in the quiet morning light, heart pounding, desperately searching his memory for her surname so he can find her in the waking world.
+            </p>
+            <p style="font-weight: 600; color: var(--textprimary);">
+              He remembers the face. He remembers the voice. He remembers the name "Baribari."<br>
+              Her surname is gone. Fade slowly to black.
+            </p>
           </div>
+
         </div>
+      </section>
 
-        <!-- RIGHT COLUMN: The Exact Textual Dream Narrative Script -->
-        <div class="lg:col-span-8 border-l-0 lg:border-l lg:border-[#222222] lg:pl-16">
-          <div class="prose prose-invert max-w-none text-[#CCCCCC] font-sans text-base md:text-lg leading-relaxed space-y-8">
-            
-            <!-- Movement I -->
-            <div class="space-y-3">
-              <h2 class="font-mono text-xs uppercase tracking-widest text-[#888888]">I. THE LANE &amp; THE WINDOW</h2>
-              <p>
-                A quiet residential lane at dusk. Amber evening light angles through overhead wires and dusty roadside trees. Saurabh pedals a bicycle alone in casual non-black clothes toward an evening gathering, his rhythm steady and unhurried. 
-              </p>
-              <p>
-                To his right, an imposing residence rises behind an old stone boundary wall topped with an iron railing. At an open second-story window, three South Asian women appear in traditional red and black clothing—each possessing an unmistakable, distinct face. One woman raises a hand in a quiet, deliberate beckoning motion toward the entrance; the other two watch him in silence. A sudden wave of déjà vu takes hold: he feels with certainty that he has encountered these women before, and that he has accidentally worn the wrong clothes. He brakes, turns his bicycle around, and rides back home.
-              </p>
-            </div>
-
-            <!-- Movement II -->
-            <div class="space-y-3 border-t border-[#222222] pt-6">
-              <h2 class="font-mono text-xs uppercase tracking-widest text-[#888888]">II. THE BLACK ARMOR</h2>
-              <p>
-                Inside his modest home, he leaves his bicycle in the hallway and walks directly to his bedroom. He lays out black trousers, a plain black crewneck T-shirt, a structured black utility jacket, and heavy black leather boots. 
-              </p>
-              <p>
-                He strips off his casual attire and dresses methodically into the black ensemble. Checking his reflection in the mirror, his face remains the same, but his presence is hardened into uniform black. Fastened into this armor, he wheels his bicycle back out onto the street.
-              </p>
-            </div>
-
-            <!-- Movement III -->
-            <div class="space-y-3 border-t border-[#222222] pt-6">
-              <h2 class="font-mono text-xs uppercase tracking-widest text-[#888888]">III. THE SHORTCUT &amp; THE LOOP</h2>
-              <p>
-                Saurabh rides back along the same road, passing beneath the stone wall and the high window. Further down the lane, he notices an open, unremarkable entrance in a concrete house beside the road. Assuming it will cut through to the parallel street, he parks his bicycle near the doorway and steps inside on foot.
-              </p>
-              <p>
-                The threshold immediately collapses into a spatial impossibility. Symmetrical, unpainted concrete hallways stretch into dim shadow. He turns through what should be an exterior exit, only to enter another identical corridor. He searches left and right; a metal door remains locked; corridors bend back onto themselves. Reaching a junction, he identifies a recognizable crack in the wall—he has looped in a circle. The building is an architectural maze with no exterior exit.
-              </p>
-            </div>
-
-            <!-- Movement IV -->
-            <div class="space-y-3 border-t border-[#222222] pt-6">
-              <h2 class="font-mono text-xs uppercase tracking-widest text-[#888888]">IV. THE SHUTTER &amp; BARIBARI</h2>
-              <p>
-                Tired, breathing heavily against the concrete wall, he notices a warm glow seeping from beneath a small partition. He approaches and knocks firmly on the corrugated metal shutter.
-              </p>
-              <p>
-                The shutter rises. Standing behind the counter is Baribari—a composed young woman with expressive dark eyes, her hair neatly bound, wearing a deep maroon traditional salwar-kameez embroidered with subtle threadwork. She studies him cautiously:
-              </p>
-              <blockquote class="border-l-2 border-white pl-4 my-4 font-mono text-sm text-white italic-none">
-                "Who are you? How did you get in here?"<br>
-                "I took a shortcut through the house," Saurabh answers. "And I’m lost."
-              </blockquote>
-              <p>
-                She unlocks the secondary shutter and releases him into the exit hall. Over the counter, an instant rapport forms. He asks her name; she replies: "Baribari." When he asks for her surname so he can locate her later, she tells him. He invites her to join him at the party down the road. Baribari smiles, drapes a light shawl over her shoulders, and steps out into the night beside him.
-              </p>
-            </div>
-
-            <!-- Movement V -->
-            <div class="space-y-3 border-t border-[#222222] pt-6">
-              <h2 class="font-mono text-xs uppercase tracking-widest text-[#888888]">V. THE GATHERING &amp; THE NIGHT WALK</h2>
-              <p>
-                They arrive together at a warm, modest home party. Saurabh introduces Baribari to his friends simply by her first name. Seeing them together, friends assume without question that they are a couple and remark that they look right together. Neither Saurabh nor Baribari corrects them; they sit beside a window, sharing an unhurried, comfortable intimacy.
-              </p>
-              <p>
-                When the gathering winds down, they leave together. Saurabh walks Baribari home through the deserted, nocturnal streets.
-              </p>
-            </div>
-
-            <!-- Movement VI -->
-            <div class="space-y-3 border-t border-[#222222] pt-6">
-              <h2 class="font-mono text-xs uppercase tracking-widest text-[#888888]">VI. THE NARROW GATE</h2>
-              <p>
-                Without sound or warning, Baribari’s body goes slack. She slips into sudden unconsciousness and begins to fall. Saurabh lunges and catches her before she hits the ground. He calls her name urgently, but receives no response. He lifts her onto his back, carrying her through the darkened road until they arrive at her home: an abrasive stone boundary wall interrupted by an exceedingly narrow iron gate.
-              </p>
-              <p>
-                With Baribari unconscious across his shoulders, Saurabh reaches up to grip the jagged masonry of the wall, carefully shifting his footing sideways through the restricted gap, shielding her waist from the rough stone. As her weight slips backward, he pivots and catches her securely in his arms, carrying her inside to her alarmed, grateful family. Standing back, watching her rest, an overwhelming certainty fills him: he never wants to lose her; he wants to share his life with her.
-              </p>
-            </div>
-
-            <!-- Movement VII -->
-            <div class="space-y-3 border-t border-[#222222] pt-6">
-              <h2 class="font-mono text-xs uppercase tracking-widest text-[#888888]">VII. THE FLARE &amp; THE VANISHING NAME</h2>
-              <p>
-                A blinding, silent white flare blooms across the screen, obliterating the night.
-              </p>
-              <p>
-                The flare cools into sterile morning light across the ceiling of Saurabh’s actual bedroom. Saurabh wakes with a sharp intake of breath, his hands clenched into the bedsheets. The entire sequence—the three women at the window, the black armor, the repeating corridors, the party, the narrow gate—was an unbroken dream.
-              </p>
-              <p>
-                He sits up in the quiet morning light, heart pounding, desperately searching his memory for her surname so he can find her in the waking world.
-              </p>
-              <p class="font-mono text-white text-sm">
-                He remembers the face. He remembers the voice. He remembers the name "Baribari."<br>
-                Her surname is gone. Fade slowly to black.
-              </p>
-            </div>
-
-          </div>
-        </div>
-
-      </div>
-    </section>
-
+    </div>
   </main>
 
-  <!-- =========================================================================
-       MINIMALIST SYSTEM FOOTER
-       ========================================================================= -->
-  <footer class="w-full border-t border-[#222222] bg-black mt-auto">
-    <div class="max-w-[1400px] mx-auto px-4 md:px-8 py-6 flex flex-col md:flex-row items-center justify-between gap-4 font-mono text-[11px] text-[#888888] uppercase tracking-wider">
-      <div>
-        © 2026 AXISCHRONICLE · SQUARGRAPH™ ORIGINAL IP
+  <!-- SQUARGRAPH Official Footer -->
+  <footer class="site-footer">
+    <div class="shell">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="footer-brand-title">SQUARGRAPH™</div>
+          <p class="footer-tagline">
+            Brand strategy, creative and digital systems built to align perception, communication and growth.
+          </p>
+          <p style="font-size: 13px; color: var(--accent); font-weight: 500;">
+            AxisChronicle · Arthouse Storytelling Engine
+          </p>
+        </div>
+
+        <div>
+          <span class="footer-col-label">Platform</span>
+          <div class="footer-links-list">
+            <a href="#cinema">The Cinema</a>
+            <a href="#synopsis">Story &amp; Script</a>
+            <a href="https://squargraph.com/work/">Selected Work</a>
+            <a href="https://squargraph.com/capabilities/">Capabilities</a>
+          </div>
+        </div>
+
+        <div>
+          <span class="footer-col-label">Studio</span>
+          <div class="footer-links-list">
+            <a href="https://squargraph.com/studio/">Studio Philosophy</a>
+            <a href="https://squargraph.com/saurabh-sohan-singh">Founder Profile</a>
+            <a href="https://squargraph.com/intelligence">Intelligence</a>
+            <a href="https://os.squargraph.com">SQUARGRAPH OS</a>
+          </div>
+        </div>
+
+        <div>
+          <span class="footer-col-label">Engage</span>
+          <div class="footer-links-list">
+            <a href="https://squargraph.com/project-direction/">Start a Project</a>
+            <a href="https://squargraph.com/discovery">Discovery Session</a>
+            <a href="https://squargraph.com/brand-foundation-sprint">Foundation Sprint</a>
+            <a href="mailto:squargraph@gmail.com">Direct Inquiry</a>
+          </div>
+        </div>
+
+        <div>
+          <span class="footer-col-label">Legal</span>
+          <div class="footer-links-list">
+            <a href="https://squargraph.com/privacy-policy">Privacy Policy</a>
+            <a href="https://squargraph.com/terms-of-use">Terms of Use</a>
+            <a href="https://squargraph.com/ai-disclosure">AI Disclosure</a>
+          </div>
+        </div>
       </div>
-      <div class="flex items-center gap-6">
-        <span>WRITTEN &amp; DIRECTED BY SAURABH SOHAN SINGH</span>
-        <span>NEW DELHI</span>
-        <a href="https://squargraph.com" target="_blank" rel="noopener noreferrer" class="text-white hover:underline">SQUARGRAPH.COM ↗</a>
+
+      <div class="footer-bottom-bar">
+        <div>
+          &copy; 2026 SQUARGRAPH™. All rights reserved. New Delhi, India.
+        </div>
+        <div>
+          Conceived, Written &amp; Directed by Saurabh Sohan Singh.
+        </div>
       </div>
     </div>
   </footer>
 
-  <!-- =========================================================================
-       HIGH-INTENT THEATER PLAYBACK SCRIPT (Canvas Simulation & Audio Drone)
-       ========================================================================= -->
+  <!-- Theater Playback Script -->
   <script>
     (function () {
       'use strict';
 
-      // 75-Panel Condensed Narrative Sequence Dataset
-      const panels = [
-        { num: 1, scene: "EXT. QUIET RESIDENTIAL LANE — DUSK", time: "00:00–00:08", dir: "Close tracking shot of a bicycle wheel rolling along a quiet Indian residential lane." },
-        { num: 6, scene: "EXT. QUIET RESIDENTIAL LANE — DUSK", time: "00:40–00:48", dir: "Three South Asian women, each with a distinct face, look out in red and black traditional clothes." },
-        { num: 13, scene: "EXT. GREAT HOUSE WINDOW — DUSK", time: "01:36–01:44", dir: "A sudden déjà vu crosses Saurabh's face; he feels he has seen these women before and worn the wrong clothes." },
-        { num: 19, scene: "INT. SAURABH’S HOME — DUSK", time: "02:24–02:32", dir: "He lays out his black armor: black trousers, plain black crewneck, black utility jacket, and heavy black boots." },
-        { num: 28, scene: "INT. SHORTCUT HOUSE — EVENING", time: "03:36–03:44", dir: "A bare concrete hallway stretches ahead; the street entrance fades behind him into silence." },
-        { num: 34, scene: "INT. REPEATING CORRIDORS — EVENING", time: "04:24–04:32", dir: "He recognizes the same crack in the concrete wall and realizes he has looped back to the start." },
-        { num: 40, scene: "INT. SHOP PARTITION — EVENING", time: "05:12–05:20", dir: "The metal shutter rises, revealing Baribari in her consistent maroon traditional outfit." },
-        { num: 49, scene: "INT. SHOP PARTITION — EVENING", time: "06:24–06:32", dir: "Saurabh asks her name; she replies: 'Baribari.' They leave the maze together." },
-        { num: 57, scene: "INT. PARTY HOUSE — NIGHT", time: "07:28–07:36", dir: "Saurabh and Baribari arrive together at a warm gathering; friends assume they are together." },
-        { num: 65, scene: "EXT. NIGHT STREET — NIGHT", time: "08:32–08:40", dir: "Without warning, Baribari suddenly becomes unconscious and begins to fall into the street." },
-        { num: 69, scene: "EXT. SMALL HOME GATE — NIGHT", time: "09:04–09:12", dir: "He carries her on his back, carefully maneuvering her waist past the rough stone gate." },
-        { num: 74, scene: "INT. SAURABH’S BEDROOM — MORNING", time: "09:44–09:52", dir: "A bright white flare transitions into pale morning light across Saurabh's real bedroom ceiling." },
-        { num: 75, scene: "INT. SAURABH’S BEDROOM — MORNING", time: "09:52–10:00", dir: "He wakes abruptly; he remembers 'Baribari', but her surname has vanished. Fade to black." }
+      const scenes = [
+        { num: 1, scene: "EXT. QUIET RESIDENTIAL LANE — DUSK", dir: "A low tracking shot follows the front wheel of Saurabh’s bicycle rolling along the dusty lane." },
+        { num: 6, scene: "EXT. QUIET RESIDENTIAL LANE — DUSK", dir: "Three South Asian women, each with a distinct face, look out in red and black traditional clothes." },
+        { num: 13, scene: "EXT. GREAT HOUSE WINDOW — DUSK", dir: "A sudden déjà vu crosses Saurabh's face; he feels he has seen these women before and worn the wrong clothes." },
+        { num: 19, scene: "INT. SAURABH’S HOME — DUSK", dir: "He lays out his black armor: black trousers, plain black crewneck, black utility jacket, and heavy black boots." },
+        { num: 28, scene: "INT. SHORTCUT HOUSE — EVENING", dir: "A bare concrete hallway stretches ahead; the street entrance fades behind him into silence." },
+        { num: 34, scene: "INT. REPEATING CORRIDORS — EVENING", dir: "He recognizes the same crack in the concrete wall and realizes he has looped back to the start." },
+        { num: 40, scene: "INT. SHOP PARTITION — EVENING", dir: "The metal shutter rises, revealing Baribari in her consistent maroon traditional outfit." },
+        { num: 49, scene: "INT. SHOP PARTITION — EVENING", dir: "Saurabh asks her name; she replies: 'Baribari.' They leave the maze together." },
+        { num: 57, scene: "INT. PARTY HOUSE — NIGHT", dir: "Saurabh and Baribari arrive together at a warm gathering; friends assume they are together." },
+        { num: 65, scene: "EXT. NIGHT STREET — NIGHT", dir: "Without warning, Baribari suddenly becomes unconscious and begins to fall into the street." },
+        { num: 69, scene: "EXT. SMALL HOME GATE — NIGHT", dir: "He carries her on his back, carefully maneuvering her waist past the rough stone gate." },
+        { num: 74, scene: "INT. SAURABH’S BEDROOM — MORNING", dir: "A bright white flare transitions into pale morning light across Saurabh's real bedroom ceiling." },
+        { num: 75, scene: "INT. SAURABH’S BEDROOM — MORNING", dir: "He wakes abruptly; he remembers 'Baribari', but her surname has vanished. Fade to black." }
       ];
 
-      // State
       let isPlaying = false;
       let currentIndex = 0;
       let elapsedInSeconds = 0;
-      let totalSeconds = 2040; // 34:00
+      const totalSeconds = 2040; // 34:00
       let lastTimestamp = null;
       let audioCtx = null;
       let audioGain = null;
-      let isAudioActive = false;
+      let isAudioActive = true;
 
-      // DOM Elements
       const canvas = document.getElementById('cinemaCanvas');
       const ctx = canvas.getContext('2d');
-      const stage = document.getElementById('theatreStage');
-      const btnPlayPause = document.getElementById('btnPlayPause');
-      const playIcon = document.getElementById('playIconSvg');
-      const pauseIcon = document.getElementById('pauseIconSvg');
-      const centerPlayPrompt = document.getElementById('centerPlayPrompt');
-      const btnPrev = document.getElementById('btnPrevPanel');
-      const btnNext = document.getElementById('btnNextPanel');
-      const scrubber = document.getElementById('timelineScrubber');
-      const progress = document.getElementById('timelineProgress');
+      const stage = document.getElementById('theaterStage');
+      const stagePlayBtn = document.getElementById('stagePlayBtn');
+      const btnPlayDeck = document.getElementById('btnPlayDeck');
+      const deckPlayIcon = document.getElementById('deckPlayIcon');
+      const deckPauseIcon = document.getElementById('deckPauseIcon');
+      const scrubber = document.getElementById('scrubberBar');
+      const progress = document.getElementById('scrubberProgress');
       const timeDisplay = document.getElementById('timeCurrent');
-      const panelTelemetry = document.getElementById('panelTelemetry');
-      const sceneSlug = document.getElementById('sceneSlug');
-      const sceneDirection = document.getElementById('sceneDirection');
-      const btnAudio = document.getElementById('btnAudioToggle');
-      const audioIndicator = document.getElementById('audioIndicator');
+      const hudScene = document.getElementById('hudScene');
+      const hudDirection = document.getElementById('hudDirection');
+      const btnAudio = document.getElementById('btnAmbientAudio');
       const audioLabel = document.getElementById('audioLabel');
       const btnFullscreen = document.getElementById('btnFullscreen');
 
-      // Setup Canvas
       function resizeCanvas() {
         const rect = stage.getBoundingClientRect();
         const dpr = window.devicePixelRatio || 1;
@@ -426,103 +1020,79 @@
 
       window.addEventListener('resize', resizeCanvas);
 
-      // Render Visual Frame
       function renderCurrentFrame() {
         if (!ctx) return;
         const w = stage.clientWidth;
         const h = stage.clientHeight;
 
-        // Base Pitch Black
-        ctx.fillStyle = '#050505';
+        ctx.fillStyle = '#0A0C0A';
         ctx.fillRect(0, 0, w, h);
 
-        const p = panels[currentIndex] || panels[0];
+        const s = scenes[currentIndex] || scenes[0];
 
-        // Atmospheric lighting gradient based on scene
         let grad;
-        if (p.num <= 13) {
-          // Dusk lane
-          grad = ctx.createRadialGradient(w * 0.65, h * 0.4, 20, w * 0.65, h * 0.4, w * 0.65);
-          grad.addColorStop(0, 'rgba(180, 115, 60, 0.22)');
-          grad.addColorStop(0.5, 'rgba(35, 40, 32, 0.35)');
-          grad.addColorStop(1, '#050505');
-        } else if (p.num <= 34) {
-          // Cold concrete maze loop
-          grad = ctx.createRadialGradient(w * 0.5, h * 0.5, 30, w * 0.5, h * 0.5, w * 0.7);
-          grad.addColorStop(0, 'rgba(60, 75, 80, 0.28)');
-          grad.addColorStop(0.5, 'rgba(20, 24, 26, 0.45)');
-          grad.addColorStop(1, '#050505');
-        } else if (p.num <= 49) {
-          // Shutter & Baribari in burgundy
+        if (s.num <= 13) {
+          grad = ctx.createRadialGradient(w * 0.65, h * 0.4, 20, w * 0.65, h * 0.4, w * 0.7);
+          grad.addColorStop(0, 'rgba(180, 115, 60, 0.25)');
+          grad.addColorStop(0.5, 'rgba(35, 40, 32, 0.4)');
+          grad.addColorStop(1, '#0A0C0A');
+        } else if (s.num <= 34) {
+          grad = ctx.createRadialGradient(w * 0.5, h * 0.5, 30, w * 0.5, h * 0.5, w * 0.75);
+          grad.addColorStop(0, 'rgba(60, 75, 80, 0.3)');
+          grad.addColorStop(0.5, 'rgba(20, 24, 26, 0.5)');
+          grad.addColorStop(1, '#0A0C0A');
+        } else if (s.num <= 49) {
           grad = ctx.createRadialGradient(w * 0.55, h * 0.45, 30, w * 0.55, h * 0.45, w * 0.65);
-          grad.addColorStop(0, 'rgba(145, 45, 55, 0.35)');
-          grad.addColorStop(0.5, 'rgba(40, 25, 28, 0.4)');
-          grad.addColorStop(1, '#050505');
-        } else if (p.num <= 57) {
-          // Party house
+          grad.addColorStop(0, 'rgba(145, 45, 55, 0.38)');
+          grad.addColorStop(0.5, 'rgba(40, 25, 28, 0.45)');
+          grad.addColorStop(1, '#0A0C0A');
+        } else if (s.num <= 57) {
           grad = ctx.createRadialGradient(w * 0.5, h * 0.5, 40, w * 0.5, h * 0.5, w * 0.65);
-          grad.addColorStop(0, 'rgba(175, 135, 75, 0.25)');
-          grad.addColorStop(0.5, 'rgba(35, 30, 24, 0.45)');
-          grad.addColorStop(1, '#050505');
-        } else if (p.num <= 69) {
-          // Night street & collapse
+          grad.addColorStop(0, 'rgba(175, 135, 75, 0.28)');
+          grad.addColorStop(0.5, 'rgba(35, 30, 24, 0.5)');
+          grad.addColorStop(1, '#0A0C0A');
+        } else if (s.num <= 69) {
           grad = ctx.createRadialGradient(w * 0.45, h * 0.55, 30, w * 0.45, h * 0.55, w * 0.7);
-          grad.addColorStop(0, 'rgba(30, 50, 65, 0.3)');
-          grad.addColorStop(0.5, 'rgba(12, 16, 20, 0.5)');
-          grad.addColorStop(1, '#050505');
+          grad.addColorStop(0, 'rgba(30, 50, 65, 0.35)');
+          grad.addColorStop(0.5, 'rgba(12, 16, 20, 0.55)');
+          grad.addColorStop(1, '#0A0C0A');
         } else {
-          // Morning flare
           grad = ctx.createRadialGradient(w * 0.5, h * 0.4, 40, w * 0.5, h * 0.4, w * 0.8);
-          grad.addColorStop(0, 'rgba(240, 235, 220, 0.45)');
-          grad.addColorStop(0.5, 'rgba(65, 70, 65, 0.3)');
-          grad.addColorStop(1, '#050505');
+          grad.addColorStop(0, 'rgba(240, 235, 220, 0.5)');
+          grad.addColorStop(0.5, 'rgba(65, 70, 65, 0.35)');
+          grad.addColorStop(1, '#0A0C0A');
         }
 
         ctx.fillStyle = grad;
         ctx.fillRect(0, 0, w, h);
 
-        // Precision 90-degree Grid lines (SQUARGRAPH mathematical framing)
-        ctx.strokeStyle = 'rgba(255, 255, 255, 0.06)';
+        // Frame line
+        ctx.strokeStyle = 'rgba(255, 255, 255, 0.08)';
         ctx.lineWidth = 1;
+        ctx.strokeRect(w * 0.06, h * 0.06, w * 0.88, h * 0.88);
 
-        // Outer border
-        ctx.strokeRect(w * 0.05, h * 0.05, w * 0.9, h * 0.9);
-
-        // Center crosshair
-        ctx.beginPath();
-        ctx.moveTo(w * 0.45, h * 0.5);
-        ctx.lineTo(w * 0.55, h * 0.5);
-        ctx.moveTo(w * 0.5, h * 0.45);
-        ctx.lineTo(w * 0.5, h * 0.55);
-        ctx.stroke();
-
-        // Authentic 35mm grain simulation
-        ctx.fillStyle = 'rgba(255, 255, 255, 0.04)';
-        for (let i = 0; i < 150; i++) {
+        // 35mm subtle grain
+        ctx.fillStyle = 'rgba(255, 255, 255, 0.035)';
+        for (let i = 0; i < 120; i++) {
           const rx = Math.random() * w;
           const ry = Math.random() * h;
           ctx.fillRect(rx, ry, 1.2, 1.2);
         }
       }
 
-      // Update HUD
       function updateHUD() {
-        const p = panels[currentIndex] || panels[0];
-        panelTelemetry.textContent = `PANEL ${String(p.num).padStart(3, '0')} // 255`;
-        sceneSlug.textContent = p.scene;
-        sceneDirection.textContent = p.dir;
+        const s = scenes[currentIndex] || scenes[0];
+        hudScene.textContent = s.scene;
+        hudDirection.textContent = s.dir;
 
-        // Timecode
         const m = Math.floor(elapsedInSeconds / 60);
-        const s = Math.floor(elapsedInSeconds % 60);
-        timeDisplay.textContent = `${String(m).padStart(2, '0')}:${String(s).padStart(2, '0')}`;
+        const sec = Math.floor(elapsedInSeconds % 60);
+        timeDisplay.textContent = `${String(m).padStart(2, '0')}:${String(sec).padStart(2, '0')}`;
 
-        // Scrubber progress
         const pct = (elapsedInSeconds / totalSeconds) * 100;
         progress.style.width = `${pct}%`;
       }
 
-      // Playback Loop
       function togglePlay() {
         if (isPlaying) {
           pause();
@@ -533,23 +1103,23 @@
 
       function play() {
         isPlaying = true;
-        playIcon.classList.add('hidden');
-        pauseIcon.classList.remove('hidden');
-        centerPlayPrompt.classList.add('opacity-0', 'pointer-events-none');
+        deckPlayIcon.style.display = 'none';
+        deckPauseIcon.style.display = 'block';
+        stagePlayBtn.style.opacity = '0';
+        stagePlayBtn.style.pointerEvents = 'none';
         lastTimestamp = performance.now();
 
-        if (isAudioActive && audioCtx && audioCtx.state === 'suspended') {
-          audioCtx.resume();
-        }
+        if (isAudioActive) initAudio();
 
         requestAnimationFrame(tick);
       }
 
       function pause() {
         isPlaying = false;
-        playIcon.classList.remove('hidden');
-        pauseIcon.classList.add('hidden');
-        centerPlayPrompt.classList.remove('opacity-0', 'pointer-events-none');
+        deckPlayIcon.style.display = 'block';
+        deckPauseIcon.style.display = 'none';
+        stagePlayBtn.style.opacity = '1';
+        stagePlayBtn.style.pointerEvents = 'auto';
       }
 
       function tick(now) {
@@ -561,8 +1131,7 @@
 
         elapsedInSeconds += delta;
 
-        // 8-second panel cadence trigger
-        const activeIdx = Math.min(panels.length - 1, Math.floor((elapsedInSeconds / totalSeconds) * panels.length));
+        const activeIdx = Math.min(scenes.length - 1, Math.floor((elapsedInSeconds / totalSeconds) * scenes.length));
         if (activeIdx !== currentIndex) {
           currentIndex = activeIdx;
           renderCurrentFrame();
@@ -578,75 +1147,59 @@
         requestAnimationFrame(tick);
       }
 
-      // Step Controls
-      function stepNext() {
-        if (currentIndex < panels.length - 1) {
-          currentIndex++;
-          elapsedInSeconds = (currentIndex / panels.length) * totalSeconds;
-          renderCurrentFrame();
-          updateHUD();
-        }
-      }
-
-      function stepPrev() {
-        if (currentIndex > 0) {
-          currentIndex--;
-          elapsedInSeconds = (currentIndex / panels.length) * totalSeconds;
-          renderCurrentFrame();
-          updateHUD();
-        }
-      }
-
-      // Scrubber Navigation
       scrubber.addEventListener('click', (e) => {
         const rect = scrubber.getBoundingClientRect();
         const clickPct = Math.max(0, Math.min(1, (e.clientX - rect.left) / rect.width));
         elapsedInSeconds = clickPct * totalSeconds;
-        currentIndex = Math.min(panels.length - 1, Math.floor(clickPct * panels.length));
+        currentIndex = Math.min(scenes.length - 1, Math.floor(clickPct * scenes.length));
         renderCurrentFrame();
         updateHUD();
       });
 
-      // Web Audio Room-Tone Drone Synthesizer
-      function toggleAudio() {
-        if (!audioCtx) {
+      function initAudio() {
+        if (audioCtx) {
+          if (audioCtx.state === 'suspended') audioCtx.resume();
+          if (audioGain) audioGain.gain.setTargetAtTime(0.24, audioCtx.currentTime, 0.3);
+          return;
+        }
+        try {
           const AudioContext = window.AudioContext || window.webkitAudioContext;
           audioCtx = new AudioContext();
 
           audioGain = audioCtx.createGain();
-          audioGain.gain.setValueAtTime(0, audioCtx.currentTime);
+          audioGain.gain.setValueAtTime(0.24, audioCtx.currentTime);
 
-          // Sub-harmonic atmospheric drone (55Hz / A1)
           const osc1 = audioCtx.createOscillator();
           osc1.type = 'sine';
           osc1.frequency.setValueAtTime(55, audioCtx.currentTime);
 
-          // Warm filtered room-tone
           const filter = audioCtx.createBiquadFilter();
           filter.type = 'lowpass';
-          filter.frequency.setValueAtTime(220, audioCtx.currentTime);
+          filter.frequency.setValueAtTime(200, audioCtx.currentTime);
 
           osc1.connect(filter);
           filter.connect(audioGain);
           audioGain.connect(audioCtx.destination);
           osc1.start();
-        }
-
-        if (isAudioActive) {
-          audioGain.gain.setTargetAtTime(0, audioCtx.currentTime, 0.2);
-          isAudioActive = false;
-          audioIndicator.className = 'inline-block w-1.5 h-1.5 bg-[#444444]';
-          audioLabel.textContent = 'AUDIO: MUTED';
-        } else {
-          if (audioCtx.state === 'suspended') audioCtx.resume();
-          audioGain.gain.setTargetAtTime(0.3, audioCtx.currentTime, 0.4);
-          isAudioActive = true;
-          audioIndicator.className = 'inline-block w-1.5 h-1.5 bg-white';
-          audioLabel.textContent = 'AUDIO: ACTIVE';
+        } catch (e) {
+          console.warn('Web Audio not enabled.', e);
         }
       }
 
-      // Fullscreen
+      function toggleAudio() {
+        if (isAudioActive) {
+          if (audioGain) audioGain.gain.setTargetAtTime(0, audioCtx.currentTime, 0.2);
+          isAudioActive = false;
+          audioLabel.textContent = 'Room-Tone: Muted';
+          btnAudio.classList.remove('is-active');
+        } else {
+          isAudioActive = true;
+          initAudio();
+          audioLabel.textContent = 'Room-Tone: Active';
+          btnAudio.classList.add('is-active');
+        }
+      }
+
       function toggleFullscreen() {
         if (!document.fullscreenElement) {
           stage.requestFullscreen().catch(err => console.log(err));
@@ -655,39 +1208,21 @@
         }
       }
 
-      // Event Listeners
-      btnPlayPause.addEventListener('click', togglePlay);
-      stage.addEventListener('click', (e) => {
-        if (e.target.closest('#centerPlayPrompt') || e.target === canvas) {
-          togglePlay();
-        }
-      });
-      btnNext.addEventListener('click', stepNext);
-      btnPrev.addEventListener('click', stepPrev);
+      btnPlayDeck.addEventListener('click', togglePlay);
+      stage.addEventListener('click', togglePlay);
       btnAudio.addEventListener('click', toggleAudio);
       btnFullscreen.addEventListener('click', toggleFullscreen);
 
-      // Keyboard Controls
       window.addEventListener('keydown', (e) => {
         if (e.code === 'Space') {
           e.preventDefault();
           togglePlay();
-        } else if (e.code === 'ArrowRight') {
-          e.preventDefault();
-          stepNext();
-        } else if (e.code === 'ArrowLeft') {
-          e.preventDefault();
-          stepPrev();
         } else if (e.code === 'KeyF') {
           e.preventDefault();
           toggleFullscreen();
-        } else if (e.code === 'KeyM') {
-          e.preventDefault();
-          toggleAudio();
         }
       });
 
-      // Initialize
       resizeCanvas();
       updateHUD();
     })();
