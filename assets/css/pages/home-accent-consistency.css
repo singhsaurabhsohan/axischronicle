@@ -1,0 +1,248 @@
+/* Use the existing site palette; preserve the live homepage composition. */
+body.home #nav {
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+}
+body.home #nav:not(.scrolled):not(.menu-open) {
+  background: transparent;
+  border-bottom: 1px solid transparent;
+}
+body.home #nav:not(.scrolled):not(.menu-open) .nav-logo img {
+  filter: brightness(0) invert(1) !important;
+}
+body.home #nav:not(.scrolled):not(.menu-open) .pill-line {
+  background: var(--sg-cream) !important;
+}
+body.home #nav:not(.scrolled):not(.menu-open) .pill-body {
+  border-color: var(--sg-cream) !important;
+}
+body.home #nav.scrolled,
+body.home #nav.menu-open {
+  background: rgba(255, 255, 255, .9);
+  border-bottom: 1px solid rgba(26, 23, 20, .08);
+}
+body.home #nav.scrolled .nav-logo img,
+body.home #nav.menu-open .nav-logo img { filter: none !important; }
+body.home #nav.scrolled .pill-line,
+body.home #nav.menu-open .pill-line { background: var(--sg-ink) !important; }
+body.home #nav.scrolled .pill-body,
+body.home #nav.menu-open .pill-body { border-color: var(--sg-ink) !important; }
+body.home .hero-section--studio {
+  background: var(--sg-forest);
+  color: var(--sg-cream);
+}
+body.home .hero-section--studio::after {
+  border-color: var(--sg-gold);
+  opacity: .25;
+}
+body.home .hero-section--studio .hero-stage-type,
+body.home .hero-section--studio .hero-stage-index {
+  color: var(--sg-gold);
+}
+body.home .hero-section--studio .hero-stage-rule {
+  background: var(--sg-gold);
+}
+body.home .hero-section--studio .hero-eyebrow,
+body.home .hero-section--studio .hero-intro-label,
+body.home .hero-section--studio .hero-signal-grid > div span,
+body.home .hero-section--studio .hero-scroll {
+  color: var(--sg-cream) !important;
+}
+body.home .hero-section--studio .hero-eyebrow .hero-eyebrow-dot {
+  background: var(--sg-gold) !important;
+  box-shadow: none;
+}
+body.home .hero-section--studio .hero-h1,
+body.home .hero-section--studio .hero-h1 em,
+body.home .hero-section--studio .hero-intro > p,
+body.home .hero-section--studio .hero-link,
+body.home .hero-section--studio .hero-signal-grid strong {
+  color: var(--sg-cream) !important;
+}
+body.home .hero-section--studio .hero-intro,
+body.home .hero-section--studio .hero-link--primary {
+  border-color: var(--sg-gold);
+}
+body.home .hero-section--studio .hero-link:hover,
+body.home .hero-section--studio .hero-link:focus-visible {
+  color: var(--sg-cream) !important;
+  border-color: var(--sg-gold);
+}
+body.home .hero-section--studio .hero-h1 {
+  text-wrap: initial;
+}
+body.home .hero-section--studio .hero-stage-rule {
+  left: calc(var(--home-rail) - 28px);
+}
+body.home .hero-section--studio .hero-h1--next-chapter {
+  font-size: clamp(52px, 6.4vw, 112px) !important;
+  line-height: 1.02;
+  letter-spacing: -.055em !important;
+}
+body.home .hero-section--studio .hero-h1--next-chapter span:nth-child(2),
+body.home .hero-section--studio .hero-h1--next-chapter em {
+  margin-left: 0;
+}
+@media (max-width: 760px) {
+  body.home .hero-section--studio .hero-h1--next-chapter {
+    font-size: clamp(40px, 10.5vw, 72px) !important;
+  }
+}
+body.home .architecture-trust {
+  background: var(--accentlight);
+}
+body.home .studio-positioning-label,
+body.home .studio-positioning-statement,
+body.home .studio-positioning-link {
+  color: var(--sg-forest);
+}
+body.home .studio-positioning-link { border-color: var(--sg-forest); }
+.studio-location-copy {
+  grid-column: 2;
+  max-width: 65ch;
+  margin: 12px 0 0;
+  color: var(--textsecondary);
+  font-size: 17px;
+  line-height: 1.7;
+}
+.studio-location-copy a { text-decoration: underline; text-underline-offset: 4px; }
+@media (max-width: 900px) {
+  .studio-location-copy { grid-column: 1; }
+}
+body.home #work { background: var(--sg-cream); }
+body.home #work .architecture-work-card:first-child {
+  background: var(--sg-forest);
+}
+body.home #work .architecture-work-card:first-child .architecture-work-body h3,
+body.home #work .architecture-work-card:first-child .architecture-card-meta,
+body.home #work .architecture-work-card:first-child .architecture-work-body > p,
+body.home #work .architecture-work-card:first-child .text-link {
+  color: var(--sg-cream);
+}
+body.home #work .architecture-work-card:first-child .text-link {
+  border-color: var(--sg-gold);
+}
+
+/* Give all projects the same media frame, typography and row alignment. */
+.hero-generated-visual,
+.hero-visual-shade {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+body.home #nav.scrolled .nav-logo img { filter: none !important; }
+.hero-generated-visual img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+.hero-visual-shade {
+  background: linear-gradient(90deg, rgba(16,26,20,.45), rgba(16,26,20,.2) 45%, rgba(16,26,20,.68));
+}
+body.home .hero-section--studio .hero-stage-type { display: none; }
+body.home .hero-section--studio::after { display: none; }
+@media (max-width: 760px) {
+  .hero-generated-visual img { object-position: 65% center; }
+  .hero-visual-shade { background: rgba(16,26,20,.78); }
+}
+body.home #work .architecture-work-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 40px 24px;
+  align-items: stretch;
+}
+body.home #work .architecture-work-card,
+body.home #work .architecture-work-card:first-child {
+  grid-column: auto;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  background: transparent;
+}
+body.home #work .architecture-work-card .architecture-work-media {
+  width: 100%;
+  min-height: 0;
+  flex: 0 0 auto;
+  aspect-ratio: 16 / 9;
+  background: var(--surface);
+}
+body.home #work .architecture-work-card .architecture-work-media--video {
+  background: #050605;
+}
+body.home #work .architecture-work-card .architecture-work-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+body.home #work .architecture-work-card .architecture-work-body {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  justify-content: flex-start !important;
+  padding: 22px 0 0 !important;
+}
+body.home #work .architecture-work-card .architecture-work-body h3 {
+  margin: 14px 0 10px;
+  font-size: clamp(25px, 2.3vw, 34px) !important;
+  line-height: 1.18 !important;
+  letter-spacing: -.035em !important;
+  color: var(--textprimary) !important;
+}
+body.home #work .architecture-work-card .architecture-card-meta {
+  margin: 0;
+  color: var(--accent) !important;
+}
+body.home #work .architecture-work-card .architecture-work-body > p:not(.architecture-card-meta) {
+  color: var(--textsecondary) !important;
+}
+body.home #work .architecture-work-card .text-link {
+  align-self: flex-start;
+  margin-top: auto;
+  color: var(--accent) !important;
+  border-color: var(--accent) !important;
+}
+@media (max-width: 640px) {
+  body.home #work .architecture-work-grid {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 34px;
+  }
+}
+
+
+/* Feathered scrims follow the text blocks, leaving the collage visible. */
+body.home .hero-section--studio :is(.hero-h1, .hero-intro, .hero-eyebrow, .hero-signal-grid) {
+  position: relative;
+  isolation: isolate;
+  text-shadow: 0 1px 8px rgba(5, 12, 8, .32);
+}
+body.home .hero-section--studio :is(.hero-h1, .hero-intro)::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  pointer-events: none;
+  inset: -28px -34px;
+  background: radial-gradient(ellipse at center, rgba(9, 19, 13, .7) 0%, rgba(9, 19, 13, .5) 48%, transparent 76%);
+}
+body.home .hero-section--studio .hero-intro::before {
+  inset: -42px -48px;
+  background: radial-gradient(ellipse at center, rgba(9, 19, 13, .88) 0%, rgba(9, 19, 13, .76) 48%, transparent 76%);
+}
+body.home .hero-section--studio .hero-eyebrow::before,
+body.home .hero-section--studio .hero-signal-grid::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  pointer-events: none;
+  inset: -20px -24px;
+  background: linear-gradient(0deg, rgba(9, 19, 13, .66), rgba(9, 19, 13, .4));
+  mask-image: linear-gradient(90deg, transparent, #000 4%, #000 96%, transparent);
+  border-radius: 24px;
+  filter: blur(12px);
+}
+body.home #nav:not(.scrolled):not(.menu-open) {
+  background: linear-gradient(180deg, rgba(9, 19, 13, .56), rgba(9, 19, 13, .16));
+}
+@media (max-width: 760px) {
+  body.home .hero-section--studio .hero-intro::before { inset: -26px -24px; }
+  body.home .hero-section--studio .hero-h1::before { inset: -24px; }
+}
