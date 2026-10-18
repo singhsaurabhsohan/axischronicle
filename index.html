@@ -13,9 +13,16 @@
   <meta property="og:type" content="video.movie" />
   <meta property="og:url" content="https://axischronicle.squargraph.com/" />
   <meta property="og:site_name" content="AxisChronicle by SQUARGRAPH™" />
+  <meta property="og:image" content="https://axischronicle.squargraph.com/assets/images/baribari-official-poster.webp" />
+  <meta property="og:image:type" content="image/webp" />
+  <meta property="og:image:width" content="1571" />
+  <meta property="og:image:height" content="2106" />
+  <meta property="og:image:alt" content="Official BARIBARI poster by AxisChronicle and SQUARGRAPH." />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="BARIBARI — Releasing 27th Oct 2026 at 12 Noon" />
   <meta name="twitter:description" content="A vivid dream leaves Saurabh with one name and a question that will not fade. BARIBARI, an original mystery from SQUARGRAPH™." />
+  <meta name="twitter:image" content="https://axischronicle.squargraph.com/assets/images/baribari-official-poster.webp" />
+  <meta name="twitter:image:alt" content="Official BARIBARI poster by AxisChronicle and SQUARGRAPH." />
 
   <link rel="icon" type="image/png" href="./favicon-g-v2.png" />
   <link rel="icon" type="image/png" href="./assets/logo/favicon-g-v2.png" />
@@ -447,6 +454,21 @@
       max-width: 1140px;
       margin: 0 auto;
       position: relative;
+    }
+
+    .official-poster-figure {
+      width: 100%;
+      max-width: 720px;
+      margin: 0 auto clamp(36px, 5vh, 56px);
+      border: 1px solid var(--border-light);
+      box-shadow: 0 30px 100px rgba(0, 0, 0, 0.95), 0 0 120px rgba(63, 94, 61, 0.1);
+      overflow: hidden;
+    }
+
+    .official-poster-image {
+      display: block;
+      width: 100%;
+      height: auto;
     }
 
     .motion-poster-card {
@@ -974,6 +996,17 @@
 
       <!-- The Centerpiece: BariBari Official Motion Poster -->
       <section class="poster-section" aria-label="BariBari Motion Poster Showcase">
+        <figure class="official-poster-figure">
+          <img
+            class="official-poster-image"
+            src="./assets/images/baribari-official-poster.webp"
+            alt="Official BARIBARI poster showing Saurabh before a shadowed house and a corridor scene."
+            width="1571"
+            height="2106"
+            fetchpriority="high"
+            decoding="async"
+          />
+        </figure>
         <div class="motion-poster-card" id="posterCard">
           <div class="poster-aspect-wrap" id="posterAspect">
             <!-- 35mm optical framing crosshairs -->
