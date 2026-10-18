@@ -493,8 +493,7 @@
     }
 
     /* ── Film introduction ── */
-    .story-section,
-    .journal-section {
+    .story-section {
       border-top: 1px solid var(--border);
       margin-top: clamp(64px, 9vw, 112px);
       padding-top: clamp(36px, 5vw, 64px);
@@ -518,7 +517,6 @@
     }
 
     .story-heading h2,
-    .journal-heading h2,
     .imprint-copy h2 {
       margin-top: 18px;
       color: var(--text-hero);
@@ -552,106 +550,6 @@
       color: var(--text-primary);
       font-size: 14px;
     }
-
-    /* ── Journal archive ── */
-    .journal-section { scroll-margin-top: 100px; }
-
-    .journal-heading {
-      display: flex;
-      align-items: end;
-      justify-content: space-between;
-      gap: 32px;
-      margin-bottom: 36px;
-    }
-
-    .journal-heading h2 { max-width: 620px; }
-
-    .journal-intro {
-      max-width: 340px;
-      color: var(--text-secondary);
-      font-size: 14px;
-      line-height: 1.7;
-    }
-
-    .journal-list { border-top: 1px solid var(--border-light); }
-
-    .journal-entry {
-      border-bottom: 1px solid var(--border);
-      transition: background var(--transition);
-    }
-
-    .journal-entry[open] { background: rgba(255, 255, 255, 0.025); }
-
-    .journal-summary {
-      display: grid;
-      grid-template-columns: minmax(0, 1fr) auto;
-      align-items: center;
-      gap: 10px 24px;
-      padding: 24px 4px;
-      cursor: pointer;
-      list-style: none;
-    }
-
-    .journal-summary::-webkit-details-marker { display: none; }
-
-    .journal-meta {
-      grid-column: 1 / -1;
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px 18px;
-      color: var(--accent-green-bright);
-      font-size: 10px;
-      font-weight: 700;
-      letter-spacing: 0.13em;
-      text-transform: uppercase;
-    }
-
-    .journal-title {
-      color: var(--text-hero);
-      font-size: clamp(19px, 2.5vw, 27px);
-      font-weight: 500;
-      letter-spacing: -0.025em;
-      line-height: 1.25;
-    }
-
-    .journal-subtitle {
-      grid-column: 1;
-      max-width: 740px;
-      color: var(--text-secondary);
-      font-size: 14px;
-      line-height: 1.65;
-    }
-
-    .journal-toggle {
-      grid-column: 2;
-      grid-row: 2 / span 2;
-      display: grid;
-      width: 38px;
-      height: 38px;
-      place-items: center;
-      border: 1px solid var(--border-light);
-      border-radius: 50%;
-      color: var(--text-primary);
-      font-size: 20px;
-      transition: transform var(--transition), background var(--transition);
-    }
-
-    .journal-entry[open] .journal-toggle {
-      transform: rotate(45deg);
-      background: rgba(255, 255, 255, 0.06);
-    }
-
-    .journal-body {
-      max-width: 760px;
-      padding: 0 62px 28px 4px;
-      color: var(--text-secondary);
-      font-size: 15px;
-      line-height: 1.8;
-    }
-
-    .journal-body p + p { margin-top: 16px; }
-    .journal-excerpt { color: var(--text-primary); }
-    .journal-loading { padding: 24px 4px; color: var(--text-muted); font-size: 13px; }
 
     /* ── Imprint ── */
     .imprint-section {
@@ -892,14 +790,6 @@
         grid-template-columns: 1fr;
         gap: 24px;
       }
-      .journal-heading {
-        align-items: flex-start;
-        flex-direction: column;
-        gap: 16px;
-      }
-      .journal-intro {
-        max-width: 560px;
-      }
       .imprint-section {
         grid-template-columns: 1fr;
         gap: 20px;
@@ -915,8 +805,6 @@
 
     @media (max-width: 640px) {
       .page-nav-links { display: none; }
-      .journal-summary { padding: 20px 2px; }
-      .journal-body { padding: 0 2px 24px; }
       .imprint-section { padding: 28px 22px; }
     }
 
@@ -963,7 +851,6 @@
       <div class="nav-actions">
         <div class="page-nav-links">
           <a href="#film">The Film</a>
-          <a href="#journal">The Archive</a>
           <a href="#studio">The Imprint</a>
         </div>
         <div class="nav-release-tag">
@@ -1094,20 +981,6 @@
         </div>
       </section>
 
-      <!-- Editorial reading room -->
-      <section class="journal-section" id="journal" aria-labelledby="journalHeading">
-        <div class="journal-heading">
-          <div>
-            <p class="section-eyebrow">The reading room</p>
-            <h2 id="journalHeading">From the archive.</h2>
-          </div>
-          <p class="journal-intro">Essays on images, sound, attention, and the making of original stories.</p>
-        </div>
-        <div class="journal-list" id="journalList" aria-live="polite">
-          <p class="journal-loading">Opening the archive…</p>
-        </div>
-      </section>
-
       <!-- AxisChronicle imprint -->
       <section class="imprint-section" id="studio" aria-labelledby="studioHeading">
         <div class="imprint-label">
@@ -1135,7 +1008,6 @@
         </div>
         <nav class="signoff-nav" aria-label="Footer navigation">
           <a href="#film">The Film</a>
-          <a href="#journal">The Archive</a>
           <a href="#studio">The Imprint</a>
         </nav>
         <div class="signoff-meta">
@@ -1270,83 +1142,7 @@
         document.body.removeChild(link);
       });
 
-      // ── 3. Editorial reading room ──
-      const journalList = document.getElementById('journalList');
-
-      function renderEditorialArchive(articles) {
-        if (!journalList || !Array.isArray(articles)) return;
-        journalList.replaceChildren();
-
-        articles.forEach(function (article) {
-          const entry = document.createElement('details');
-          entry.className = 'journal-entry';
-
-          const summary = document.createElement('summary');
-          summary.className = 'journal-summary';
-
-          const meta = document.createElement('div');
-          meta.className = 'journal-meta';
-          [article.number && 'Note ' + article.number, article.category, article.readTime]
-            .filter(Boolean)
-            .forEach(function (value) {
-              const item = document.createElement('span');
-              item.textContent = value;
-              meta.appendChild(item);
-            });
-
-          const title = document.createElement('h3');
-          title.className = 'journal-title';
-          title.textContent = article.title || 'Untitled note';
-
-          const subtitle = document.createElement('span');
-          subtitle.className = 'journal-subtitle';
-          subtitle.textContent = article.subtitle || article.excerpt || '';
-
-          const toggle = document.createElement('span');
-          toggle.className = 'journal-toggle';
-          toggle.setAttribute('aria-hidden', 'true');
-          toggle.textContent = '+';
-
-          summary.append(meta, title, subtitle, toggle);
-          entry.appendChild(summary);
-
-          const body = document.createElement('div');
-          body.className = 'journal-body';
-          const excerpt = article.excerpt || (Array.isArray(article.content) ? article.content[0] : '');
-          if (excerpt) {
-            const paragraph = document.createElement('p');
-            paragraph.className = 'journal-excerpt';
-            paragraph.textContent = excerpt;
-            body.appendChild(paragraph);
-          }
-          entry.appendChild(body);
-
-          entry.addEventListener('toggle', function () {
-            if (!entry.open) return;
-            journalList.querySelectorAll('details[open]').forEach(function (openEntry) {
-              if (openEntry !== entry) openEntry.open = false;
-            });
-          });
-
-          journalList.appendChild(entry);
-        });
-      }
-
-      fetch('./assets/data/editorial.json')
-        .then(function (response) {
-          if (!response.ok) throw new Error('The archive could not be loaded.');
-          return response.json();
-        })
-        .then(renderEditorialArchive)
-        .catch(function () {
-          if (!journalList) return;
-          const message = document.createElement('p');
-          message.className = 'journal-loading';
-          message.textContent = 'The archive is temporarily unavailable. Please refresh to try again.';
-          journalList.replaceChildren(message);
-        });
-
-      // ── 4. Modal Controllers ──
+      // ── 3. Modal Controllers ──
       function setupModal(triggerId, modalId) {
         const trigger = document.getElementById(triggerId);
         const modal = document.getElementById(modalId);
